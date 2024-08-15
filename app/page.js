@@ -98,30 +98,36 @@ export default function Home() {
         <Typography variant="h4" component="h2" gutterBottom>Pricing</Typography>
         <Grid container spacing={4} justifyContent="center">
           {/* Pricing plans */}
-          <Grid item xs = {12} md={4} border>
+          <Grid item xs = {12} md={4}>
+            <Box height={120} border={"2px solid black"} borderRadius={10}>
             <Typography variant="h6"> Esay Text Input</Typography>
             <Typography>
               {' '}
               Simply input your text and let our software do the rest. Creating
               flashcards has never been easier
             </Typography>
+            </Box>
           </Grid>
 
           <Grid item xs = {12} md={4}>
-            <Typography variant="h6"> Esay Access</Typography>
-            <Typography>
+            <Box height={120} border={"2px solid black"} borderRadius={10}>
+              <Typography variant="h6"> Esay Access</Typography>
+              <Typography>
               {' '}
               Access on any device anywhere!
-            </Typography>
+              </Typography>
+            </Box>
           </Grid>
 
           <Grid item xs = {12} md={4}>
-            <Typography variant="h6"> Uses Artifical Intelligence</Typography>
-            <Typography>
-              {' '}
-              Artifical Intelligence is common now and it makes the complex tasks of
-              creating and manufacturing flashcards easy as 1,2,3
-            </Typography>
+            <Box height={120} border={"2px solid black"} borderRadius={10}>
+              <Typography variant="h6"> Uses Artifical Intelligence</Typography>
+              <Typography>
+                {' '}
+                Artifical Intelligence is common now and it makes the complex tasks of
+                creating and manufacturing flashcards easy as 1,2,3
+              </Typography>
+            </Box>
           </Grid>
         </Grid>
       </Box>
