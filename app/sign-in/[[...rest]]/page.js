@@ -1,4 +1,4 @@
-import ClerkFormPage from "@/components/clerk-form/clerkForm";
+import ClerkFormPage from "@/components/clerkForm/clerkForm";
 
 export default function SignInPage() {
   return <ClerkFormPage isLogin={true} />;
