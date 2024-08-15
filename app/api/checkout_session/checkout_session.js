@@ -5,6 +5,11 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
   apiVersion: '2022-11-15',
 })
 
+/*
+  Now, let’s add a utility function to format the amount for Stripe. 
+  Add this function at the top of the file, just after the imports:
+*/
+
 const formatAmountForStripe = (amount, currency) => {
     return Math.round(amount * 100)
 }
