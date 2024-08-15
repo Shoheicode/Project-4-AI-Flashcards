@@ -63,13 +63,66 @@ export default function Home() {
       <Box sx={{my: 6}}>
         <Typography variant="h4" component="h2" gutterBottom>Features</Typography>
         <Grid container spacing={4}>
-          {/* Feature items */}
+          {/* Feature items */
+          
+          
+          }
+          <Grid item xs = {12} md={4}>
+            <Typography variant="h6"> Esay Text Input</Typography>
+            <Typography>
+              {' '}
+              Simply input your text and let our software do the rest. Creating
+              flashcards has never been easier
+            </Typography>
+          </Grid>
+
+          <Grid item xs = {12} md={4}>
+            <Typography variant="h6"> Esay Access</Typography>
+            <Typography>
+              {' '}
+              Access on any device anywhere!
+            </Typography>
+          </Grid>
+
+          <Grid item xs = {12} md={4}>
+            <Typography variant="h6"> Uses Artifical Intelligence</Typography>
+            <Typography>
+              {' '}
+              Artifical Intelligence is common now and it makes the complex tasks of
+              creating and manufacturing flashcards easy as 1,2,3
+            </Typography>
+          </Grid>
         </Grid>
       </Box>
       <Box sx={{my: 6, textAlign: 'center'}}>
         <Typography variant="h4" component="h2" gutterBottom>Pricing</Typography>
         <Grid container spacing={4} justifyContent="center">
           {/* Pricing plans */}
+          <Grid item xs = {12} md={4} border>
+            <Typography variant="h6"> Esay Text Input</Typography>
+            <Typography>
+              {' '}
+              Simply input your text and let our software do the rest. Creating
+              flashcards has never been easier
+            </Typography>
+          </Grid>
+
+          <Grid item xs = {12} md={4}>
+            <Typography variant="h6"> Esay Access</Typography>
+            <Typography>
+              {' '}
+              Access on any device anywhere!
+            </Typography>
+          </Grid>
+
+          <Grid item xs = {12} md={4}>
+            <Typography variant="h6"> Uses Artifical Intelligence</Typography>
+            <Typography>
+              {' '}
+              Artifical Intelligence is common now and it makes the complex tasks of
+              creating and manufacturing flashcards easy as 1,2,3
+            </Typography>
+          </Grid>
         </Grid>
       </Box>
       
