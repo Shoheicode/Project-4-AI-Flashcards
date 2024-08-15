@@ -15,6 +15,7 @@ import {
 
 import { database } from "@/app/firebase";
 import { collection, doc, getDoc, setDoc, addDoc } from 'firebase/firestore';
+import { useRouter } from 'next/router';
 
 export default function Flashcard() {
     const { isLoaded, isSignedIn, user } = useUser()
