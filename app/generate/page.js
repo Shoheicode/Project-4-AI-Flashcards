@@ -7,13 +7,20 @@ import {
   Button,
   Typography,
   Box,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+  Grid,
 } from '@mui/material'
+
 
 import { database } from "@/app/firebase";
 import { collection, doc, getDoc, setDoc, addDoc } from 'firebase/firestore';
 
-
 export default function Generate() {
+  
   const [text, setText] = useState('')
   const [flashcards, setFlashcards] = useState([])
 

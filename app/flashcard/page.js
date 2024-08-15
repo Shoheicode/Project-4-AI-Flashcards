@@ -3,6 +3,18 @@ import { collection, doc, getDoc } from "firebase/firestore"
 import { useSearchParams } from "next/navigation"
 import { useEffect, useState } from "react"
 import { database } from "../firebase"
+import {
+  Container,
+  TextField,
+  Button,
+  Typography,
+  Box,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions
+} from '@mui/material'
 
 export default function Flashcard() {
     const { isLoaded, isSignedIn, user } = useUser()

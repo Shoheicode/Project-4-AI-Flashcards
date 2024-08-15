@@ -16,7 +16,7 @@ You should return in the following JSON format:
 
 export async function POST(req){
 
-    const openAI = OpenAI({apiKey: process.env.OPEN_AI_API_KEY})
+    const openAI = new OpenAI({apiKey: process.env.OPEN_AI_API_KEY})
     const data = await req.text();
 
      /* 
@@ -29,14 +29,14 @@ export async function POST(req){
         4. We set the `response_format` to ‘json_object’ to ensure we receive a JSON response.
     */
 
-    const completion = await openAI.chat.completion.create({
+    const completion = await openAI.chat.completions.create({
         messages: [
             {role: 'system', content: systemPrompt},
             {role: 'user', content: data}
         ],
         model: 'gpt-3.5-turbo', // Specify the model to use
-        response_format: {type: 'json-object'},
-        stream: true, // Enable streaming responses
+        response_format: {type: 'json_object'},
+        //stream: true, // Enable streaming responses
     })
 
     // Parse the JSON response from the OpenAI API
