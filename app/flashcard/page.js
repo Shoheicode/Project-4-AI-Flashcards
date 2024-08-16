@@ -54,7 +54,34 @@ export default function Flashcard() {
                 <Card>
                   <CardActionArea onClick={() => handleCardClick(flashcard.id)}>
                     <CardContent>
-                      <Box sx={{ /* Styling for flip animation */ }}>
+                      <Box sx={{ /* Styling for flip animation */ 
+                        perspective: '1000px',
+                        '& > div' :{
+                          transition: 'transform 0.6s',
+                          transformStyle: 'preserve-3d',
+                          position: 'relative',
+                          width: '100%',
+                          height: '200px',
+                          boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
+                          transform: flipped[index] 
+                            ? 'rotateY(180deg)' 
+                            : 'rotate',
+                        },
+                        '& > div > div' :{
+                          position: 'absolute',
+                          width: '100%',
+                          height: '100%',
+                          backfaceVisibility: 'hidden',
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          padding: 2,
+                          boxSizing:'border-box'
+                        },
+                        '& > div > div:nth-of-type(2)' :{
+                          transform: 'rotateY(180 deg)',
+                        }
+                      }}>
                         <div>
                           <div>
                             <Typography variant="h5" component="div">
