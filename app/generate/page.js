@@ -16,15 +16,20 @@ import {
   Card,
   CardContent,
   CardActionArea,
+  AppBar,
+  Toolbar,
+  Stack,
 } from '@mui/material'
 
 
 import { database } from "@/app/firebase";
 import { collection, doc, getDoc, setDoc, addDoc, writeBatch } from 'firebase/firestore';
-import { useUser } from '@clerk/nextjs';
+import { SignedOut, SignedIn, SignOutButton, useUser, UserButton } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
+import NavBar from '@/components/navbar/navbar';
 
 export default function Generate() {
+  
   const { isLoaded, isSignedIn, user } = useUser()
   //const [flashcards, setFlashcards] = useState([])
   const [text, setText] = useState('')
@@ -87,7 +92,13 @@ export default function Generate() {
     }
 
 
+  } 
+
+  const loadFlashCards = async ()=>{
+    router.push('/flashcards')
+    setSetName('')
   }
+
 
   const handleCardClick = (id) => {
     setFlipped((prev) => ({
@@ -127,142 +138,161 @@ export default function Generate() {
     alert('An error occurred while generating flashcards. Please try again.')
   }
 }
+const styleBox = {
+  background: "rgb(35,150,255);",
+  background: "radial-gradient(circle, rgba(35,150,255,1) 0%, rgba(194,240,255,1) 87%, rgba(229,255,104,1) 100%);"  
+}
 
-  return (
-    <Container maxWidth="md">
-      <Box minHeight={"90vh"}>
-        <Box 
-          sx={{ my: 4 }} 
-          display={"flex"}
-          flexDirection={"column"}
-          justifyContent={"center"}
-          alignItems={"center"}
-        >
-          <Typography variant="h4" component="h1" gutterBottom>
-            Generate Flashcards
-          </Typography>
-          <TextField
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            label="Enter text"
-            fullWidth
-            multiline
-            rows={4}
-            variant="outlined"
-            sx={{ mb: 2 }}
-          />
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={handleSubmit}
-            fullWidth
+return (
+    <Box
+      sx={styleBox}
+      minHeight={"120vh"}
+    >
+      <NavBar />
+      <Container maxWidth="md">
+        <Box minHeight={"90vh"}>
+          <Box 
+            sx={{ my: 4 }} 
+            display={"flex"}
+            flexDirection={"column"}
+            justifyContent={"center"}
+            alignItems={"center"}
           >
-            Generate Flashcards
-          </Button>
-        </Box>
-
-          {flashcards.length > 0 && (<Box>
-            <Card>
-                <CardActionArea onClick={() => handleCardClick(currentIndex)}>
-                  <CardContent>
-                    <Box sx={{ /* Styling for flip animation */ 
-                      perspective: '1000px',
-                      '& > div' :{
-                        transition: 'transform 0.6s',
-                        transformStyle: 'preserve-3d',
-                        position: 'relative',
-                        width: '100%',
-                        height: '200px',
-                        boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
-                        transform: flipped[currentIndex] 
-                          ? 'rotateY(180deg)' 
-                          : 'rotate',
-                      },
-                      '& > div > div' :{
-                        position: 'absolute',
-                        width: '100%',
-                        height: '100%',
-                        backfaceVisibility: 'hidden',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        padding: 2,
-                        boxSizing:'border-box'
-                      },
-                      '& > div > div:nth-of-type(2)' :{
-                        transform: 'rotateY(180deg)',
-                      }
-                    }}>
-                    <div>
-                      <div>
-                        <Typography variant="h5" component="div">
-                          {flashcards[currentIndex].front}
-                        </Typography>
-                      </div>
-                      <div>
-                        <Typography variant="h5" component="div">
-                          {flashcards[currentIndex].back}
-                        </Typography>
-                      </div>
-                    </div>
-                  </Box>
-                </CardContent> 
-              </CardActionArea>
-            </Card>
-            <Box 
-              width={"100%"}
-              display={"flex"}
-              justifyContent={"space-around"}
+            <Typography variant="h4" component="h1" gutterBottom>
+              Generate Flashcards
+            </Typography>
+            <TextField
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              label="Enter text"
+              fullWidth
+              multiline
+              rows={4}
+              variant="outlined"
+              sx={{ mb: 2 }}
+            />
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={handleSubmit}
+              fullWidth
             >
-              <Button 
-                variant='contained'
-                onClick={goToPrevSlide}
-              >
-                Prev
-              </Button>
-              <Button
-                //style={rightArrowStyles}
-                variant='contained'
-                onClick={goToNextSlide}
-              >
-                Next
-              </Button>
-            </Box>
+              Generate Flashcards
+            </Button>
           </Box>
-          )}
-          {flashcards.length > 0 && (
-                <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center' }}>
-                    <Button variant="contained" color="primary" onClick={handleOpenDialog}>
-                    Save Flashcards
-                    </Button>
-                </Box>
-            )}
-          <Dialog open={dialogOpen} onClose={handleCloseDialog}>
-              <DialogTitle>Save Flashcard Set</DialogTitle>
-              <DialogContent>
-                  <DialogContentText>
-                  Please enter a name for your flashcard set.
-                  </DialogContentText>
-                  <TextField
-                  autoFocus
-                  margin="dense"
-                  label="Set Name"
-                  type="text"
-                  fullWidth
-                  value={setName}
-                  onChange={(e) => setSetName(e.target.value)}
-                  />
-              </DialogContent>
-              <DialogActions>
-                  <Button onClick={handleCloseDialog}>Cancel</Button>
-                  <Button onClick={saveFlashcards} color="primary">
-                  Save
+
+            {flashcards.length > 0 && (<Box>
+              <Stack gap={3}>
+                <Card>
+                    <CardActionArea onClick={() => handleCardClick(currentIndex)}>
+                      <CardContent>
+                        <Box sx={{ /* Styling for flip animation */ 
+                          perspective: '1000px',
+                          '& > div' :{
+                            transition: 'transform 0.6s',
+                            transformStyle: 'preserve-3d',
+                            position: 'relative',
+                            width: '100%',
+                            height: '200px',
+                            boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
+                            transform: flipped[currentIndex] 
+                              ? 'rotateY(180deg)' 
+                              : 'rotate',
+                          },
+                          '& > div > div' :{
+                            position: 'absolute',
+                            width: '100%',
+                            height: '100%',
+                            backfaceVisibility: 'hidden',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            padding: 2,
+                            boxSizing:'border-box'
+                          },
+                          '& > div > div:nth-of-type(2)' :{
+                            transform: 'rotateY(180deg)',
+                          }
+                        }}>
+                        <div>
+                          <div>
+                            <Typography variant="h5" component="div">
+                              {flashcards[currentIndex].front}
+                            </Typography>
+                          </div>
+                          <div>
+                            <Typography variant="h5" component="div">
+                              {flashcards[currentIndex].back}
+                            </Typography>
+                          </div>
+                        </div>
+                      </Box>
+                    </CardContent> 
+                  </CardActionArea>
+                </Card>
+                <Box 
+                  width={"100%"}
+                  display={"flex"}
+                  justifyContent={"space-around"}
+                >
+                  <Button 
+                    variant='contained'
+                    onClick={goToPrevSlide}
+                  >
+                    Prev
                   </Button>
-              </DialogActions>
-          </Dialog>
-          
-        </Box>
-    </Container>
-    
+                  <Typography>
+                    {currentIndex + 1}/{flashcards.length}
+                  </Typography>
+                  <Button
+                    //style={rightArrowStyles}
+                    variant='contained'
+                    onClick={goToNextSlide}
+                  >
+                    Next
+                  </Button>
+                </Box>
+              </Stack>
+            </Box>
+            )}
+              {flashcards.length > 0 && (
+                  <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center' }}>
+                      <Button variant="contained" color="primary" onClick={handleOpenDialog}>
+                        Save Flashcards
+                      </Button>
+                  </Box>
+              )}
+            <Dialog open={dialogOpen} onClose={handleCloseDialog}>
+                <DialogTitle>Save Flashcard Set</DialogTitle>
+                <DialogContent>
+                    <DialogContentText>
+                    Please enter a name for your flashcard set.
+                    </DialogContentText>
+                    <TextField
+                    autoFocus
+                    margin="dense"
+                    label="Set Name"
+                    type="text"
+                    fullWidth
+                    value={setName}
+                    onChange={(e) => setSetName(e.target.value)}
+                    />
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleCloseDialog}>Cancel</Button>
+                    <Button onClick={saveFlashcards} color="primary">
+                    Save
+                    </Button>
+                </DialogActions>
+            </Dialog>
+            <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center' }}>
+                <Button variant="contained" color="primary" onClick={loadFlashCards}>
+                  Load Flashcards
+                </Button>
+            </Box>
+            
+          </Box>
+      </Container>
+    </Box>
   )
 }

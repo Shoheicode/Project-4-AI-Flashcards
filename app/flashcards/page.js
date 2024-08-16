@@ -11,12 +11,16 @@ import {
   Card,
   CardActionArea,
   CardContent,
+  AppBar,
+  Toolbar
 } from '@mui/material'
 
 import { database } from "@/app/firebase";
 import { collection, doc, getDoc, setDoc, addDoc } from 'firebase/firestore';
 import { useRouter } from 'next/navigation';
-import { useUser } from '@clerk/nextjs';
+import { SignedIn, SignedOut, UserButton, useUser } from '@clerk/nextjs';
+import Link from 'next/link';
+import NavBar from '@/components/navbar/navbar';
 
 export default function Flashcard() {
     //gets the user
@@ -52,25 +56,43 @@ export default function Flashcard() {
       const handleCardClick = (id) => {
         router.push(`/flashcard?id=${id}`)
       }
-
+      const styleBox = {
+        background: "rgb(35,150,255);",
+        background: "radial-gradient(circle, rgba(35,150,255,1) 0%, rgba(194,240,255,1) 87%, rgba(229,255,104,1) 100%);"  
+      }
+    
       return (
-        <Container maxWidth="md">
-          <Typography>HELLO</Typography>
-          <Grid container spacing={3} sx={{ mt: 4 }}>
-            {flashcards.map((flashcard, index) => (
-              <Grid item xs={12} sm={6} md={4} key={index}>
-                <Card>
-                  <CardActionArea onClick={() => handleCardClick(flashcard.name)}>
-                    <CardContent>
-                      <Typography variant="h5" component="div">
-                        {flashcard.name}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
+        <Box
+          sx={styleBox}
+          minHeight={"120vh"}
+        >
+           <NavBar />
+          <Container maxWidth="md">
+            <Box 
+              width={"100%"}
+              minHeight={"100vh"}
+              padding={10}
+            >
+              <Typography>
+                Cards
+              </Typography>
+              <Grid container spacing={3} sx={{ mt: 4 }}>
+                {flashcards.map((flashcard, index) => (
+                  <Grid item xs={12} sm={6} md={4} key={index}>
+                    <Card>
+                      <CardActionArea onClick={() => handleCardClick(flashcard.name)}>
+                        <CardContent>
+                          <Typography variant="h5" component="div">
+                            {flashcard.name}
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
+                  </Grid>
+                ))}
               </Grid>
-            ))}
-          </Grid>
-        </Container>
+            </Box>
+          </Container>
+        </Box>
       ) 
 }

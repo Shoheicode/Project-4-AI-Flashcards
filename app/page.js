@@ -19,6 +19,9 @@ import Head from "next/head";
 import App from "next/app";
 import PaidTierCard from "@/components/paidTierCard/paidTierCard";
 import InfoCard from "@/components/infoCard/infoCard";
+import Link from "next/link";
+
+import NavBar from "@/components/navbar/navbar";
 
 export default function Home() {
   const handleSubmit = async () => {
@@ -38,31 +41,22 @@ export default function Home() {
     }
   };
 
+  const styleBox = {
+    background: "rgb(35,150,255);",
+    background: "radial-gradient(circle, rgba(35,150,255,1) 0%, rgba(194,240,255,1) 87%, rgba(229,255,104,1) 100%);"  
+  }
+
   return (
-    <>
+    <Box
+      sx={styleBox}
+      minHeight={"120vh"}
+    >
       <Head>
         <title>Flashcard Study Tool</title>
         <meta name="description" content="Flashcard Study Tool" />
       </Head>
 
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" style={{ flexGrow: 1 }}>
-            AStar Flashcard
-          </Typography>
-          <SignedOut>
-            <Button color="inherit" href="/sign-in">
-              Login
-            </Button>
-            <Button color="inherit" href="/sign-up">
-              Sign Up
-            </Button>
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-        </Toolbar>
-      </AppBar>
+      <NavBar />
 
       <Container maxWidth="lg">
         <Box sx={{ textAlign: "center", my: 4 }}>
@@ -80,7 +74,7 @@ export default function Home() {
           >
             Get Started
           </Button>
-          <Button variant="outlined" color="primary" sx={{ mt: 2 }}>
+          <Button variant="outlined" color="inherit" sx={{ mt: 2 }} href="/learnmore">
             Learn More
           </Button>
         </Box>
@@ -131,6 +125,6 @@ export default function Home() {
           </Grid>
         </Box>
       </Container>
-    </>
+    </Box>
   );
 }
