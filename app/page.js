@@ -48,7 +48,7 @@ export default function Home() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" style={{ flexGrow: 1 }}>
-            Flashcard SaaS
+            AStar Flashcard
           </Typography>
           <SignedOut>
             <Button color="inherit" href="/sign-in">

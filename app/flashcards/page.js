@@ -18,12 +18,14 @@ import { collection, doc, getDoc, setDoc, addDoc } from 'firebase/firestore';
 import { useRouter } from 'next/router';
 
 export default function Flashcard() {
+    //gets the user
     const { isLoaded, isSignedIn, user } = useUser()
     const [flashcards, setFlashcards] = useState([])
     const router = useRouter()
   
     useEffect(() => {
         async function getFlashcards() {
+          //If there is no user, end the function
           if (!user) return
           const docRef = doc(collection(db, 'users'), user.id)
           const docSnap = await getDoc(docRef)
