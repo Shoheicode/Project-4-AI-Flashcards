@@ -9,12 +9,16 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+import DevicesIcon from "@mui/icons-material/Devices";
+import TextsmsIcon from "@mui/icons-material/Textsms";
+import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import Image from "next/image";
 import getStripe from "./utils/get-stripe";
 import { SignedIn, SignedOut, UserButton, SignIn } from "@clerk/nextjs";
 import Head from "next/head";
 import App from "next/app";
 import PaidTierCard from "@/components/paidTierCard/paidTierCard";
+import InfoCard from "@/components/infoCard/infoCard";
 
 export default function Home() {
   const handleSubmit = async () => {
@@ -80,34 +84,28 @@ export default function Home() {
             Learn More
           </Button>
         </Box>
+
         <Box sx={{ my: 6 }}>
           <Typography variant="h4" component="h2" gutterBottom>
             Features
           </Typography>
           <Grid container spacing={4}>
             {/* Feature items */}
-            <Grid item xs={12} md={4}>
-              <Typography variant="h6"> Esay Text Input</Typography>
-              <Typography>
-                {" "}
-                Simply input your text and let our software do the rest.
-                Creating flashcards has never been easier
-              </Typography>
-            </Grid>
-
-            <Grid item xs={12} md={4}>
-              <Typography variant="h6"> Esay Access</Typography>
-              <Typography> Access on any device anywhere!</Typography>
-            </Grid>
-
-            <Grid item xs={12} md={4}>
-              <Typography variant="h6"> Uses Artifical Intelligence</Typography>
-              <Typography>
-                {" "}
-                Artifical Intelligence is common now and it makes the complex
-                tasks of creating and manufacturing flashcards easy as 1,2,3
-              </Typography>
-            </Grid>
+            <InfoCard
+              icon={<TextsmsIcon />}
+              title="Text to Cards in Seconds"
+              subtitle="Transform your notes with just a few keystrokes"
+            />
+            <InfoCard
+              icon={<DevicesIcon />}
+              title="Easy Access"
+              subtitle="Flashcards are accessible anytime, anywhere."
+            />
+            <InfoCard
+              icon={<AutoAwesomeIcon />}
+              title="Harness Artificial Intelligence"
+              subtitle="Watch AI generate flashcards in seconds"
+            />
           </Grid>
         </Box>
 
