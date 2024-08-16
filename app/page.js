@@ -118,7 +118,7 @@ export default function Home() {
             <PaidTierCard
               bgcolor="silver"
               tierName="Silver"
-              price="$15 / month"
+              price="$5 / month"
               description="Access to basic flashcard features and limited storage"
             />
 

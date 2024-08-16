@@ -15,10 +15,12 @@ import {
 
 import { database } from "@/app/firebase";
 import { collection, doc, getDoc, setDoc, addDoc } from 'firebase/firestore';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
+import { useUser } from '@clerk/nextjs';
 
 export default function Flashcard() {
     //gets the user
+    
     const { isLoaded, isSignedIn, user } = useUser()
     const [flashcards, setFlashcards] = useState([])
     const router = useRouter()
@@ -27,11 +29,14 @@ export default function Flashcard() {
         async function getFlashcards() {
           //If there is no user, end the function
           if (!user) return
-          const docRef = doc(collection(db, 'users'), user.id)
+          const docRef = doc(collection(database, 'users'), user.id)
           const docSnap = await getDoc(docRef)
+          
           if (docSnap.exists()) {
-            const collections = docSnap.data().flashcards || []
+            const collections = docSnap.data().flashcardSets || []
             setFlashcards(collections)
+            console.log(collections)
+            console.log(collections.length)
           } else {
             await setDoc(docRef, { flashcards: [] })
           }
@@ -39,12 +44,18 @@ export default function Flashcard() {
         getFlashcards()
       }, [user])
 
+      if (!isLoaded || !isSignedIn){
+        console.log("HIHIHII")
+        return <></>
+      }
+
       const handleCardClick = (id) => {
         router.push(`/flashcard?id=${id}`)
       }
 
       return (
         <Container maxWidth="md">
+          <Typography>HELLO</Typography>
           <Grid container spacing={3} sx={{ mt: 4 }}>
             {flashcards.map((flashcard, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>

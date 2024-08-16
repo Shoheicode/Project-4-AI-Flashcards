@@ -22,12 +22,14 @@ import {
 import { database } from "@/app/firebase";
 import { collection, doc, getDoc, setDoc, addDoc, writeBatch } from 'firebase/firestore';
 import { useUser } from '@clerk/nextjs';
+import { useRouter } from 'next/navigation';
 
 export default function Generate() {
   const { isLoaded, isSignedIn, user } = useUser()
   //const [flashcards, setFlashcards] = useState([])
   const [text, setText] = useState('')
   const [flashcards, setFlashcards] = useState([])
+  const router = useRouter()
 
   const [setName, setSetName] = useState('')
   const [dialogOpen, setDialogOpen] = useState(false)
@@ -64,11 +66,14 @@ export default function Generate() {
   
       alert('Flashcards saved successfully!')
       handleCloseDialog()
+      router.push('/flashcards')
       setSetName('')
     } catch (error) {
       console.error('Error saving flashcards:', error)
       alert('An error occurred while saving flashcards. Please try again.')
     }
+
+
   }
 
   const handleCardClick = (id) => {
@@ -152,6 +157,7 @@ export default function Generate() {
                 <Grid container spacing={2}>
                 {flashcards.map((flashcard, index) => (
                     <Grid item xs={12} sm={6} md={4} key={index}>
+                      {console.log(flashcards)}
                     <Card>
                       <CardActionArea onClick={() => handleCardClick(index)}>
                         <CardContent>
