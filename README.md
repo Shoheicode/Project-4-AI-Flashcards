@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/1cee86ca-3671-4c57-b309-5ade5677b358)# AStar Flashcards
+# AStar Flashcards
 
 ![IMAGE OF WEBSITE](https://github.com/user-attachments/assets/ed6a2897-dc59-4e0a-8d0d-a3a3c7b1d538)
 
