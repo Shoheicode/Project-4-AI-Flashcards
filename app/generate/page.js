@@ -25,31 +25,6 @@ import { useUser } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
 
 export default function Generate() {
-  //STYLE
-  const rightArrowStyles = {
-    position: "absolute",
-    top: "50%",
-    transform: "translate(0, -50%)",
-    right: "32px",
-    fontSize: "45px",
-    color: "black",
-    zIndex: 1,
-    cursor: "pointer",
-  };
-
-  const leftArrowStyles = {
-    position: "absolute",
-    top: "50%",
-    transform: "translate(0, -50%)",
-    left: "32px",
-    fontSize: "45px",
-    color: "black",
-    zIndex: 1,
-    cursor: "pointer",
-  };
-
-
-
   const { isLoaded, isSignedIn, user } = useUser()
   //const [flashcards, setFlashcards] = useState([])
   const [text, setText] = useState('')
@@ -231,10 +206,6 @@ export default function Generate() {
                       </div>
                     </div>
                   </Box>
-                        {/* <Typography variant="h6">Front:</Typography>
-                        <Typography>{flashcard.front}</Typography>
-                        <Typography variant="h6" sx={{ mt: 2 }}>Back:</Typography>
-                        <Typography>{flashcard.back}</Typography>*/}
                 </CardContent> 
               </CardActionArea>
             </Card>
