@@ -1,24 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AStar Flashcards
+-----
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+In today's fast-paced learning landscape, having the right study tools is more important than ever. Introducing Flashcard SaaS, an innovative web application that’s set to transform how students and professionals create, organize, and review flashcards. This in-depth tutorial will walk you through the entire process of developing a robust Software as a Service (SaaS) application using cutting-edge technologies like Next.js, React, Firebase, and Stripe. By the end of this journey, you'll have built a dynamic and scalable flashcard platform that not only highlights your technical expertise but also delivers substantial value to users aiming to boost their learning efficiency.
 
 ## Learn More
 
