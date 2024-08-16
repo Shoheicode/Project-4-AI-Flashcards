@@ -13,7 +13,6 @@ import DevicesIcon from "@mui/icons-material/Devices";
 import TextsmsIcon from "@mui/icons-material/Textsms";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import Image from "next/image";
-import getStripe from "./utils/get-stripe";
 import { SignedIn, SignedOut, UserButton, SignIn } from "@clerk/nextjs";
 import Head from "next/head";
 import App from "next/app";
@@ -21,23 +20,6 @@ import PaidTierCard from "@/components/paidTierCard/paidTierCard";
 import InfoCard from "@/components/infoCard/infoCard";
 
 export default function Home() {
-  const handleSubmit = async () => {
-    const checkoutSession = await fetch("/api/checkout_sessions", {
-      method: "POST",
-      headers: { origin: "http://localhost:3000" },
-    });
-    const checkoutSessionJson = await checkoutSession.json();
-
-    const stripe = await getStripe();
-    const { error } = await stripe.redirectToCheckout({
-      sessionId: checkoutSessionJson.id,
-    });
-
-    if (error) {
-      console.warn(error.message);
-    }
-  };
-
   return (
     <>
       <Head>
