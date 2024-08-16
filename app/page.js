@@ -9,6 +9,7 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+import "./typewrite.css"
 import DevicesIcon from "@mui/icons-material/Devices";
 import TextsmsIcon from "@mui/icons-material/Textsms";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
@@ -41,6 +42,8 @@ export default function Home() {
     }
   };
 
+  const styleText = {}
+
   const styleBox = {
     background: "rgb(35,150,255);",
     background: "radial-gradient(circle, rgba(35,150,255,1) 0%, rgba(194,240,255,1) 87%, rgba(229,255,104,1) 100%);"  
@@ -60,8 +63,8 @@ export default function Home() {
 
       <Container maxWidth="lg">
         <Box sx={{ textAlign: "center", my: 4 }}>
-          <Typography variant="h2" component="h1" gutterBottom>
-            Welcome to Team AStar Flashcard
+          <Typography variant="h2" component="h1" gutterBottom id="text">
+            Welcome to Team AStar <br></br>Flashcard
           </Typography>
           <Typography variant="h5" component="h2" gutterBottom>
             The easiest way to create flashcards from your text.

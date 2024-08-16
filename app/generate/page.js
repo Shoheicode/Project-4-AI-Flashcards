@@ -21,6 +21,7 @@ import {
   Stack,
 } from '@mui/material'
 
+import './text.css'
 
 import { database } from "@/app/firebase";
 import { collection, doc, getDoc, setDoc, addDoc, writeBatch } from 'firebase/firestore';
@@ -158,7 +159,7 @@ return (
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <Typography variant="h4" component="h1" gutterBottom>
+            <Typography variant="h4" component="h1" gutterBottom id='generateText'>
               Generate Flashcards
             </Typography>
             <TextField
