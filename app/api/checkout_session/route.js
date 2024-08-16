@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
+import PRICING_PLANS from "@/app/utils/getPricingPlans";
+
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
   apiVersion: "2022-11-15",
 });
@@ -28,6 +30,13 @@ export async function POST(req) {
             — We define a single line item for the Pro subscription, priced at $10 per month.
             — We set success and cancel URLs, which will be used to redirect the user after the payment process.
     */
+
+    // data object should be in the format { plan: "planName" }
+    const data = await req.json();
+
+    const planName = data.plan;
+    const planPrice = PRICING_PLANS[planName];
+
     const params = {
       mode: "subscription",
       payment_method_types: ["card"],
@@ -36,9 +45,9 @@ export async function POST(req) {
           price_data: {
             currency: "usd",
             product_data: {
-              name: "Pro subscription",
+              name: `${planName} subscription`,
             },
-            unit_amount: formatAmountForStripe(10, "usd"), // $10.00, // $10.00 in cents
+            unit_amount: formatAmountForStripe(planPrice, "usd"), // $10.00, // $10.00 in cents
             recurring: {
               interval: "month",
               interval_count: 1,

@@ -97,6 +97,7 @@ export default function Home() {
           </Typography>
           <Grid container spacing={4} justifyContent="center">
             {/* Pricing plans */}
+            {/* Could use the getPricingPlans util to dynamically make PaidTierCards instead of hard-coding them */}
             <PaidTierCard
               bgcolor="silver"
               tierName="Silver"
