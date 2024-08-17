@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
+import { getAuth } from "@clerk/nextjs/server";
 import Stripe from "stripe";
 
 import PRICING_PLANS from "@/app/utils/getPricingPlans";
+import writeUserSessionToFirestore from "./writeUserSessionToFirestore";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
   apiVersion: "2022-11-15",
@@ -30,6 +32,8 @@ export async function POST(req) {
             — We define a single line item for the Pro subscription, priced at $10 per month.
             — We set success and cancel URLs, which will be used to redirect the user after the payment process.
     */
+    const { userId } = getAuth(req);
+    // if user isn't logged in, redirect to login page, and then somehow to the checkout page
 
     // data object should be in the format { plan: "planName" }
     const data = await req.json();
@@ -67,8 +71,9 @@ export async function POST(req) {
     /*
         2. We create the checkout session using `stripe.checkout.sessions.create(params)`.
       */
-
     const checkoutSession = await stripe.checkout.sessions.create(params);
+
+    await writeUserSessionToFirestore(userId, checkoutSession.id);
 
     //3. We return the created session as a JSON response with a 200 status code.
     return NextResponse.json(checkoutSession, {

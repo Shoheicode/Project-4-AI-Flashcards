@@ -10,7 +10,9 @@ export default function PaidTierCard({
   const handleSubmit = async () => {
     const checkoutSession = await fetch("/api/checkout_session", {
       method: "POST",
-      headers: { origin: "http://localhost:3000" },
+      headers: {
+        origin: "http://localhost:3000",
+      },
       body: JSON.stringify({
         plan: tierName,
       }),
