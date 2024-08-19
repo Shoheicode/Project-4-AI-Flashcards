@@ -29,9 +29,6 @@ export default function NavBar(){
     };
     
     const { isLoaded, isSignedIn, user } = useUser();
-    if(isSignedIn){
-      console.log(user.fullName)
-    }
 
     const [userName, setUsername] = React.useState("");
 
