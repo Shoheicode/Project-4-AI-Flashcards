@@ -3,11 +3,17 @@ import { collection, doc, setDoc, getDoc } from "firebase/firestore";
 
 import { database } from "@/app/firebase";
 
+// To test:
+// Ensure correct API keys are being used
+// Ensure that a user record corresponding to the user signed into clerk exists in firestore.
+// Use Stripe CLI to forward events to localhost:3000/api/handle_stripe_event
+// Make a test payment to any subscription
+// Observe the tier field in Firestore update
+
+// Updates the tier field in firestore for a user who is signed into clerk and makes a successful purchase with stripe
 export async function POST(req) {
   const event = await req.json();
-  // left off on testing if you can update the userDoc
-  // However, you need to create a user document for the user logged into clerk
-  // This means you need to make a webhook for clerk https://clerk.com/docs/integrations/webhooks/sync-data#set-up-ngrok
+  
   console.log(event.type);
   switch (event.type) {
     case "checkout.session.completed":
