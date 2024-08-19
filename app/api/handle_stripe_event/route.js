@@ -8,12 +8,13 @@ export async function POST(req) {
   // left off on testing if you can update the userDoc
   // However, you need to create a user document for the user logged into clerk
   // This means you need to make a webhook for clerk https://clerk.com/docs/integrations/webhooks/sync-data#set-up-ngrok
+  console.log(event.type);
   switch (event.type) {
     case "checkout.session.completed":
     case "checkout.session.async_payment_succeeded":
       const sessionsDocRef = doc(
         collection(database, "sessionsToUsers"),
-        event.id
+        event.data.object.id
       );
 
       const docSnap = await getDoc(sessionsDocRef);
@@ -31,8 +32,8 @@ export async function POST(req) {
           },
           { merge: true }
         );
-        break;
       }
+      break;
 
     case "payment_intent.payment_failed":
       console.log("failed");
@@ -40,7 +41,7 @@ export async function POST(req) {
       break;
   }
 
-  return NextResponse.json("yay", {
+  return NextResponse.json({
     status: 200,
   });
 }

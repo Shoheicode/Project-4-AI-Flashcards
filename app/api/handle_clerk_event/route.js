@@ -7,7 +7,7 @@ export async function POST(req, res) {
     case "user.created":
     case "user.createdAtEdge":
       const userId = payload.data.id;
-      console.log(userId);
+      console.log("handle_clerk_event", userId);
       await createUser(userId);
   }
 
