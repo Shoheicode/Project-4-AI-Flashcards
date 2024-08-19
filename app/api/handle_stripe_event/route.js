@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { collection, doc, setDoc, getDoc } from "firebase/firestore";
+import { collection, doc, setDoc, getDoc, deleteDoc } from "firebase/firestore";
 
 import { database } from "@/app/firebase";
 import getServerStripe from "@/app/utils/api/getServerStripe";
@@ -42,10 +42,12 @@ export async function POST(req) {
           await setDoc(
             userDocRef,
             {
-              tier: ID_TO_PLAN[purchasedPriceId]
+              tier: ID_TO_PLAN[purchasedPriceId],
             },
             { merge: true }
           );
+
+          await deleteDoc(sessionsDocRef);
         }
       } catch (err) {
         console.log("Error:", event.type, err);
