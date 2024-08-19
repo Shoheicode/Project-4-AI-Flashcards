@@ -77,7 +77,7 @@ export default function NavBar(){
           <Typography
             fontSize={20}
           >
-            {isLoaded && user.fullName}
+            {isLoaded && isSignedIn && user.fullName}
           </Typography>
         </Stack>
       </Box>
