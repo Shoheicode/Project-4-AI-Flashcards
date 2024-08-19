@@ -21,3 +21,13 @@ export async function createUser(userId) {
     await setDoc(userDocRef, { flashcardSets: [], tier: "free" });
   }
 }
+
+export async function getSubscriptionId(userId) {
+  const userDocRef = doc(collection(database, "users"), userId);
+  const userDocSnap = await getDoc(userDocRef);
+
+  if (userDocSnap.exists()) {
+    const subscriptionId = userDocSnap.data().subscriptionId;
+    return subscriptionId;
+  }
+}

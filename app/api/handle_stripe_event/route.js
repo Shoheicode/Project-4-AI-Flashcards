@@ -10,9 +10,9 @@ import { ID_TO_PLAN } from "@/app/utils/getPricingPlans";
 // Ensure that a user record corresponding to the user signed into clerk exists in firestore.
 // Use Stripe CLI to forward events to localhost:3000/api/handle_stripe_event
 // Make a test payment to any subscription
-// Observe the tier field in Firestore update
+// Observe the tier and subscriptionId field in Firestore update
 
-// Updates the tier field in firestore for a user who is signed into clerk and makes a successful purchase with stripe
+// Updates the tier and subscriptionId field in firestore for a user who is signed into clerk and makes a successful purchase with stripe
 export async function POST(req) {
   const stripe = await getServerStripe();
 
@@ -25,6 +25,7 @@ export async function POST(req) {
         const invoiceId = event.data.object.invoice;
         const invoice = await stripe.invoices.retrieve(invoiceId);
         const purchasedPriceId = invoice.lines.data[0].price.id;
+        const subscriptionId = invoice.lines.data[0].subscription;
 
         const sessionsDocRef = doc(
           collection(database, "sessionsToUsers"),
@@ -43,6 +44,7 @@ export async function POST(req) {
             userDocRef,
             {
               tier: ID_TO_PLAN[purchasedPriceId],
+              subscriptionId: subscriptionId,
             },
             { merge: true }
           );
