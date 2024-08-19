@@ -5,6 +5,7 @@ import {
   Box,
   Button,
   Container,
+  createTheme,
   Grid,
   Toolbar,
   Typography,
@@ -23,6 +24,7 @@ import InfoCard from "@/components/infoCard/infoCard";
 import Link from "next/link";
 
 import NavBar from "@/components/navbar/navbar";
+import { Padding } from "@mui/icons-material";
 
 export default function Home() {
   const handleSubmit = async () => {
@@ -42,7 +44,27 @@ export default function Home() {
     }
   };
 
-  const styleText = {}
+  const theme = createTheme({
+    typography: {
+      fontFamily: [
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+      ].join(','),
+    },
+  });
+
+  const styleText = {
+    marginTop: "0px;",
+    marginBottom: "0px;"
+  };
 
   const styleBox = {
     background: "rgb(35,150,255);",
@@ -61,12 +83,23 @@ export default function Home() {
 
       <NavBar />
 
-      <Container maxWidth="lg">
-        <Box sx={{ textAlign: "center", my: 4 }}>
-          <Typography variant="h2" component="h1" gutterBottom id="text">
-            Welcome to Team AStar <br></br>Flashcard
-          </Typography>
-          <Typography variant="h5" component="h2" gutterBottom>
+      <Box
+        minWidth="lg"
+        margin={0}
+      >
+        <Box 
+          width={"100%"}
+          height={"100vh"}
+          sx={{ textAlign: "center" }}
+          bgcolor={"black"}  
+          color={"white"}
+          margin={"0px"}
+          padding={10}
+        >
+            <Typography variant="h2" component="h1" gutterBottom id="text">
+              Welcome to Team AStar <br></br>Flashcard
+            </Typography>
+          <Typography variant="h5" component="h2" gutterBottom className="apply">
             The easiest way to create flashcards from your text.
           </Typography>
           <Button
@@ -82,13 +115,20 @@ export default function Home() {
           </Button>
         </Box>
 
-        <Box sx={{ my: 6 }}>
-          <Typography variant="h4" component="h2" gutterBottom>
+        <Box 
+          // sx={{ my: 6 }}
+          padding={10}  
+          bgcolor={"darkblue"}
+          color={"white"}
+          height={"100vh"}
+        >
+          <Typography variant="h2" component="h2" gutterBottom className="apply">
             Features
           </Typography>
           <Grid container spacing={4}>
             {/* Feature items */}
             <InfoCard
+              
               icon={<TextsmsIcon />}
               title="Text to Cards in Seconds"
               subtitle="Transform your notes with just a few keystrokes"
@@ -106,8 +146,11 @@ export default function Home() {
           </Grid>
         </Box>
 
-        <Box sx={{ my: 6, textAlign: "center" }}>
-          <Typography variant="h3" component="h2" gutterBottom>
+        <Box sx={{textAlign: "center" }}
+          padding={10}
+          bgcolor={"blue"}
+        >
+          <Typography variant="h3" component="h2" gutterBottom color={"white"} className="apply">
             Pricing
           </Typography>
           <Grid container spacing={4} justifyContent="center">
@@ -127,7 +170,7 @@ export default function Home() {
             />
           </Grid>
         </Box>
-      </Container>
+      </Box>
     </Box>
   );
 }

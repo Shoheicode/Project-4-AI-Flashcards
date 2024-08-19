@@ -20,6 +20,7 @@ import {
   Card,
   CardContent,
   CardActionArea,
+  Stack,
 } from '@mui/material'
 import NavBar from "@/components/navbar/navbar"
 
@@ -27,6 +28,26 @@ export default function Flashcard() {
     const { isLoaded, isSignedIn, user } = useUser()
     const [flashcards, setFlashcards] = useState([])
     const [flipped, setFlipped] = useState({})
+    const [currentIndex, setCurrentIndex] = useState(0);
+    //const [fcards, setFCards] = useState([])
+    
+    const goToNextSlide = () =>{
+      console.log(currentIndex)
+      setFlipped((prev) => ({
+        ...prev,
+        [currentIndex]: false,
+      }))
+      setCurrentIndex(currentIndex === flashcards.length - 1 ? 0 : currentIndex+1);
+    }
+
+    const goToPrevSlide = () =>{
+      console.log(currentIndex)
+      setFlipped((prev) => ({
+        ...prev,
+        [currentIndex]: false,
+      }))
+      setCurrentIndex(currentIndex === 0 ? flashcards.length-1 : currentIndex-1);
+    }
     
     const searchParams = useSearchParams()
     const search = searchParams.get('id')
@@ -63,12 +84,10 @@ export default function Flashcard() {
           <NavBar />
           <Container maxWidth="md">
               <Typography variant="h1">{search}</Typography>
-            <Grid container spacing={3} sx={{ mt: 4 }}>
-              {flashcards.map((flashcard, index) => (
-
-                <Grid item xs={12} sm={6} md={4} key={index}>
-                  <Card>
-                    <CardActionArea onClick={() => handleCardClick(index)}>
+            {flashcards.length > 0 && (<Box>
+              <Stack gap={3}>
+                <Card>
+                    <CardActionArea onClick={() => handleCardClick(currentIndex)}>
                       <CardContent>
                         <Box sx={{ /* Styling for flip animation */ 
                           perspective: '1000px',
@@ -79,7 +98,7 @@ export default function Flashcard() {
                             width: '100%',
                             height: '200px',
                             boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
-                            transform: flipped[index] 
+                            transform: flipped[currentIndex] 
                               ? 'rotateY(180deg)' 
                               : 'rotate',
                           },
@@ -98,25 +117,48 @@ export default function Flashcard() {
                             transform: 'rotateY(180deg)',
                           }
                         }}>
+                        <div>
                           <div>
-                            <div>
-                              <Typography variant="h5" component="div">
-                                {flashcard.front}
-                              </Typography>
-                            </div>
-                            <div>
-                              <Typography variant="h5" component="div">
-                                {flashcard.back}
-                              </Typography>
-                            </div>
+                            <Typography variant="h5" component="div">
+                              {flashcards[currentIndex].front}
+                            </Typography>
                           </div>
-                        </Box>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
+                          <div>
+                            <Typography variant="h5" component="div">
+                              {flashcards[currentIndex].back}
+                            </Typography>
+                          </div>
+                        </div>
+                        
+                      </Box>
+                    </CardContent> 
+                  </CardActionArea>
+                </Card>
+                <Box 
+                  width={"100%"}
+                  display={"flex"}
+                  justifyContent={"space-around"}
+                >
+                  <Button 
+                    variant='contained'
+                    onClick={goToPrevSlide}
+                  >
+                    Prev
+                  </Button>
+                  <Typography>
+                    {currentIndex + 1}/{flashcards.length}
+                  </Typography>
+                  <Button
+                    //style={rightArrowStyles}
+                    variant='contained'
+                    onClick={goToNextSlide}
+                  >
+                    Next
+                  </Button>
+                </Box>
+              </Stack>
+            </Box>
+            )}
           </Container>
         </Box>
       )

@@ -12,7 +12,7 @@
     background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shine 4s infinite linear;
+    animation: shine 5s infinite linear;
   }
   
   @keyframes shine {
@@ -23,6 +23,6 @@
       background-position: 300px;
     }
     100% {
-      background-position: 520px;
+      background-position: 570px;
     }
   }
