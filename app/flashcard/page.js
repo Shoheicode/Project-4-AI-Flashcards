@@ -72,8 +72,8 @@ export default function Flashcard() {
         }))
       }
       const styleBox = {
-        background: "rgb(35,150,255);",
-        background: "radial-gradient(circle, rgba(35,150,255,1) 0%, rgba(194,240,255,1) 87%, rgba(229,255,104,1) 100%);"  
+        background: "rgb(30,0,255);",
+        background: "radial-gradient(circle, rgba(30,0,255,1) 0%, rgba(0,0,0,1) 100%);"  
       }
     
       return (
