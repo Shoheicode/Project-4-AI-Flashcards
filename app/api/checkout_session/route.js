@@ -3,7 +3,7 @@ import { getAuth } from "@clerk/nextjs/server";
 import Stripe from "stripe";
 
 import PRICING_PLANS from "@/app/utils/getPricingPlans";
-import writeUserSessionToFirestore from "./writeUserSessionToFirestore";
+import { writeUserSessionToFirestore } from "@/app/utils/api/firestoreHelper";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
   apiVersion: "2022-11-15",
