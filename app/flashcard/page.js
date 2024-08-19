@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import { useUser } from "@clerk/nextjs"
-import { collection, doc, getDoc, getDocs } from "firebase/firestore"
-import { useSearchParams } from "next/navigation"
-import { useEffect, useState } from "react"
-import { database } from "../firebase"
+import { useUser } from "@clerk/nextjs";
+import { collection, doc, getDoc, getDocs } from "firebase/firestore";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import { database } from "../firebase";
 import {
   Container,
   TextField,
