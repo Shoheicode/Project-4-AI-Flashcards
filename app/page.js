@@ -13,7 +13,6 @@ import DevicesIcon from "@mui/icons-material/Devices";
 import TextsmsIcon from "@mui/icons-material/Textsms";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import Image from "next/image";
-import getStripe from "./utils/get-stripe";
 import { SignedIn, SignedOut, UserButton, SignIn } from "@clerk/nextjs";
 import Head from "next/head";
 import App from "next/app";
@@ -24,33 +23,14 @@ import Link from "next/link";
 import NavBar from "@/components/navbar/navbar";
 
 export default function Home() {
-  const handleSubmit = async () => {
-    const checkoutSession = await fetch("/api/checkout_sessions", {
-      method: "POST",
-      headers: { origin: "http://localhost:3000" },
-    });
-    const checkoutSessionJson = await checkoutSession.json();
-
-    const stripe = await getStripe();
-    const { error } = await stripe.redirectToCheckout({
-      sessionId: checkoutSessionJson.id,
-    });
-
-    if (error) {
-      console.warn(error.message);
-    }
-  };
-
   const styleBox = {
     background: "rgb(35,150,255);",
-    background: "radial-gradient(circle, rgba(35,150,255,1) 0%, rgba(194,240,255,1) 87%, rgba(229,255,104,1) 100%);"  
-  }
+    background:
+      "radial-gradient(circle, rgba(35,150,255,1) 0%, rgba(194,240,255,1) 87%, rgba(229,255,104,1) 100%);",
+  };
 
   return (
-    <Box
-      sx={styleBox}
-      minHeight={"120vh"}
-    >
+    <Box sx={styleBox} minHeight={"120vh"}>
       <Head>
         <title>Flashcard Study Tool</title>
         <meta name="description" content="Flashcard Study Tool" />
@@ -74,7 +54,12 @@ export default function Home() {
           >
             Get Started
           </Button>
-          <Button variant="outlined" color="inherit" sx={{ mt: 2 }} href="/learnmore">
+          <Button
+            variant="outlined"
+            color="inherit"
+            sx={{ mt: 2 }}
+            href="/learnmore"
+          >
             Learn More
           </Button>
         </Box>
@@ -109,6 +94,7 @@ export default function Home() {
           </Typography>
           <Grid container spacing={4} justifyContent="center">
             {/* Pricing plans */}
+            {/* Could use the getPricingPlans util to dynamically make PaidTierCards instead of hard-coding them */}
             <PaidTierCard
               bgcolor="silver"
               tierName="Silver"
