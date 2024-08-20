@@ -145,7 +145,7 @@ export default function NavBar(){
               </Drawer>
             </ThemeProvider>;
     }
-
+    
     return <ThemeProvider theme={darkTheme}>
         <AppBar position="static" color={"secondary"}>
           <Toolbar>
