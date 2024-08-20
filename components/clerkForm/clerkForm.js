@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import {
   Container,
@@ -9,11 +11,12 @@ import {
 } from "@mui/material";
 import { SignIn, SignUp } from "@clerk/nextjs";
 import Link from "next/link";
+import NavBar from "../navbar/navbar";
 
 export default function ClerkFormPage({ isLogin }) {
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: "#3f51b5" }}>
+      {/* <AppBar position="static" sx={{ backgroundColor: "#3f51b5" }}>
         <Toolbar>
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
             Flashcard SaaS
@@ -24,7 +27,8 @@ export default function ClerkFormPage({ isLogin }) {
             </Link>
           </Button>
         </Toolbar>
-      </AppBar>
+      </AppBar> */}
+      <NavBar />
 
       <Container>
         <Box
