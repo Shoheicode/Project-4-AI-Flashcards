@@ -140,8 +140,8 @@ export default function Generate() {
   }
 }
 const styleBox = {
-  background: "rgb(35,150,255);",
-  background: "radial-gradient(circle, rgba(35,150,255,1) 0%, rgba(194,240,255,1) 87%, rgba(229,255,104,1) 100%);"  
+  background: "rgb(30,0,255);",
+  background: "radial-gradient(circle, rgba(30,0,255,1) 0%, rgba(0,0,0,1) 100%);"
 }
 
 return (
@@ -162,6 +162,11 @@ return (
             <Typography variant="h4" component="h1" gutterBottom id='generateText'>
               Generate Flashcards
             </Typography>
+            <Box
+              className='textArea'
+              width={"100%"}
+              padding={2}
+            >
             <TextField
               value={text}
               onChange={(e) => setText(e.target.value)}
@@ -169,9 +174,10 @@ return (
               fullWidth
               multiline
               rows={4}
-              variant="outlined"
+              variant="filled"
               sx={{ mb: 2 }}
             />
+            </Box>
             <Button
               variant="contained"
               color="primary"
