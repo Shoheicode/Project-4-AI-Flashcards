@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+/* Base */
+#text {
+  position: relative;
+  color: hsl(0, 0%, 100%);
+  font-weight: bold!important;
+  font-family: "Anonymous Pro", monospace!important;
+  letter-spacing: 7px!important;
+  overflow: hidden;
+  text-wrap:stable;
+  border-right: 2px solid hsl(0, 0%, 0%);
+  white-space: nowrap;
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 1000ms infinite;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.apply{
+  font-family: "Playfair Display", serif!important;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: hsl(0, 0%, 100%);
+  }
+  to {
+    border-right-color: hsl(0, 0%, 0%);
+  }
+}
