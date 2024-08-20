@@ -1,7 +1,6 @@
 'use client'
-
-import NavBar from "@/components/navbar/navbar"
 import { Box } from "@mui/material"
+import NavBar from "@/components/navbar/navbar"
 
 export default function learnMorePage(){
     const styleBox = {

@@ -134,6 +134,25 @@ export default function Home() {
             />
           </Grid>
         </Box>
+
+      {/* Button just to test cancelling subscription*/}
+      {/* <Button
+        variant="contained"
+        sx={{ mt: 2 }}
+        onClick={async () => {
+          await fetch("/api/cancel_subscription", {
+            method: "POST",
+            headers: {
+              origin: "http://localhost:3000",
+            },
+          })
+            .then((response) => response.text()) // send response body to next then chain
+            .then((body) => console.log(body))
+            .catch((err) => console.log(err));
+        }}
+      >
+        Cancel
+      </Button> */}
       </Box>
     </Box>
   );
