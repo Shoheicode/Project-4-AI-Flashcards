@@ -1,5 +1,5 @@
 'use client'
-
+import { Box } from "@mui/material"
 import NavBar from "@/components/navbar/navbar"
 
 export default function learnMorePage(){

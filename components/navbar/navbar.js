@@ -121,11 +121,6 @@ export default function NavBar(){
                       <Typography variant="h6">
                         AStar Flashcard
                       </Typography>
-                      <img
-                        //src={astar}
-                      >
-
-                      </img>
                     </Link>
                     <SignedOut>
                       <Button color="inherit" href="/sign-in">
