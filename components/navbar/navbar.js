@@ -85,14 +85,25 @@ export default function NavBar(){
 
     const EmptyDrawerList = (
       <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
-        <SignedOut>
-          <Button color="inherit" href="/sign-in">
-            Login
-          </Button>
-          <Button color="inherit" href="/sign-up">
-            Sign Up
-          </Button>
-        </SignedOut>
+        <Stack
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          height={"100"}
+        >
+          <SignedOut>
+            <Button color="inherit" href="/sign-in" 
+              size="20px"
+            >
+              Login
+            </Button>
+            <Button color="inherit" href="/sign-up"
+              size="20px"
+            >
+              Sign Up
+            </Button>
+          </SignedOut>
+        </Stack>
       </Box>
     );
 
@@ -101,7 +112,7 @@ export default function NavBar(){
       return <ThemeProvider theme={darkTheme}>
                 <AppBar position="static" color={"secondary"}>
                   <Toolbar>
-                    <IconButton
+                    {/* <IconButton
                         size="large"
                         edge="start"
                         color="inherit"
@@ -113,16 +124,11 @@ export default function NavBar(){
                       >
                       <MenuIcon>
                       </MenuIcon>
-                    </IconButton>
+                    </IconButton> */}
                     <Link href={"/"} style={{ flexGrow: 1 }}>
                       <Typography variant="h6">
                         AStar Flashcard
                       </Typography>
-                      <img
-                        //src={astar}
-                      >
-
-                      </img>
                     </Link>
                     <SignedOut>
                       <Button color="inherit" href="/sign-in">
@@ -145,7 +151,7 @@ export default function NavBar(){
               </Drawer>
             </ThemeProvider>;
     }
-    
+
     return <ThemeProvider theme={darkTheme}>
         <AppBar position="static" color={"secondary"}>
           <Toolbar>
