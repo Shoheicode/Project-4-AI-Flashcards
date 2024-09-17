@@ -137,10 +137,10 @@ export default function Generate() {
     alert('An error occurred while generating flashcards. Please try again.')
   }
 }
-const styleBox = {
-  background: "rgb(30,0,255);",
-  background: "radial-gradient(circle, rgba(30,0,255,1) 0%, rgba(0,0,0,1) 100%);"
-}
+// const styleBox = {
+//   background: "rgb(30,0,255);",
+//   background: "radial-gradient(circle, rgba(30,0,255,1) 0%, rgba(0,0,0,1) 100%);"
+// }
 
 return (
     <Box
