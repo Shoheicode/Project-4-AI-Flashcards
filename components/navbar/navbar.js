@@ -52,7 +52,7 @@ export default function NavBar(){
               <ListItemText primary={"Create"} />
             </ListItemButton>
           </ListItem>
-          <ListItem key={"Create Flashcards"} disablePadding>
+          <ListItem key={"Load Flashcards"} disablePadding>
             <ListItemButton href="/flashcards">
               <ListItemIcon>
                 <SortIcon></SortIcon>
