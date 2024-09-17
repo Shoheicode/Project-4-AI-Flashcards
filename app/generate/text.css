@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 #generateText {
     color: hsl(0, 0%, 100%);
     font-size: 50px!important;
