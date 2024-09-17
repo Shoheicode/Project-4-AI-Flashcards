@@ -145,7 +145,7 @@ const styleBox = {
 return (
     <Box
       // sx={styleBox}
-      className="animate-gradient-x"
+      className="moving-background-flashcard"
       minHeight={"120vh"}
     >
       <NavBar />
