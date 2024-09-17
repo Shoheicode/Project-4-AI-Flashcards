@@ -144,7 +144,8 @@ const styleBox = {
 
 return (
     <Box
-      sx={styleBox}
+      // sx={styleBox}
+      className="animate-gradient-x"
       minHeight={"120vh"}
     >
       <NavBar />
