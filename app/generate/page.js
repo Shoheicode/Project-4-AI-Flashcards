@@ -289,13 +289,7 @@ return (
                     Save
                     </Button>
                 </DialogActions>
-            </Dialog>
-            {/* <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center' }}>
-                <Button variant="contained" color="primary" onClick={loadFlashCards}>
-                  Load Flashcards
-                </Button>
-            </Box> */}
-            
+            </Dialog>            
           </Box>
       </Container>
     </Box>
