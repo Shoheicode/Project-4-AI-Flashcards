@@ -66,7 +66,7 @@ export default function NavBar(){
               <ListItemIcon>
                 <Info></Info>
               </ListItemIcon>
-              <ListItemText primary={"Load"} />
+              <ListItemText primary={"About"} />
             </ListItemButton>
           </ListItem>
         </List>
