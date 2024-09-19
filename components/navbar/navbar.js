@@ -157,7 +157,11 @@ export default function NavBar(){
     return <ThemeProvider theme={darkTheme}>
         <AppBar position="static" color={"secondary"}>
           <Toolbar
-          
+            style={
+              {
+                width: "100%"
+              }
+            }
           >
             <IconButton
                 size="large"
