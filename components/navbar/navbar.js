@@ -9,6 +9,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import CreateIcon from '@mui/icons-material/Create';
 import SearchIcon from '@mui/icons-material/Search';
 import SortIcon from '@mui/icons-material/Sort';
+import InfoIcon from '@mui/icons-material/Info';
 import { Image } from "@mui/icons-material";
 
 export default function NavBar(){
@@ -54,6 +55,14 @@ export default function NavBar(){
           </ListItem>
           <ListItem key={"Load Flashcards"} disablePadding>
             <ListItemButton href="/flashcards">
+              <ListItemIcon>
+                <SortIcon></SortIcon>
+              </ListItemIcon>
+              <ListItemText primary={"Load"} />
+            </ListItemButton>
+          </ListItem>
+          <ListItem key={"About"} disablePadding>
+            <ListItemButton href="/about">
               <ListItemIcon>
                 <SortIcon></SortIcon>
               </ListItemIcon>
