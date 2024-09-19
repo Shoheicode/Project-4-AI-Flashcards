@@ -121,19 +121,6 @@ export default function NavBar(){
       return <ThemeProvider theme={darkTheme}>
                 <AppBar position="static" color={"secondary"}>
                   <Toolbar>
-                    {/* <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                        sx={{ 
-                          mr: 2 
-                        }}
-                        onClick={toggleDrawer(true)}
-                      >
-                      <MenuIcon>
-                      </MenuIcon>
-                    </IconButton> */}
                     <Link href={"/"} style={{ flexGrow: 1 }}>
                       <Typography variant="h6">
                         AStar Flashcard
