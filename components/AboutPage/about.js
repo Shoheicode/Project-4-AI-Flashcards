@@ -21,7 +21,7 @@ const CoolAboutPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
+      <div className='header'>
         <motion.h1 
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -29,7 +29,7 @@ const CoolAboutPage = () => {
         >
           Team AStar
         </motion.h1>
-      </header>
+      </div>
 
       <main>
         <motion.h2 
