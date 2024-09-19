@@ -120,7 +120,13 @@ export default function NavBar(){
       console.log("HIHIHII")
       return <ThemeProvider theme={darkTheme}>
                 <AppBar position="static" color={"secondary"}>
-                  <Toolbar>
+                  <Toolbar
+                  style={
+                    {
+                      width: "100%"
+                    }
+                  }
+                  >
                     <Link href={"/"} style={{ flexGrow: 1 }}>
                       <Typography variant="h6">
                         AStar Flashcard
@@ -150,7 +156,9 @@ export default function NavBar(){
 
     return <ThemeProvider theme={darkTheme}>
         <AppBar position="static" color={"secondary"}>
-          <Toolbar>
+          <Toolbar
+          
+          >
             <IconButton
                 size="large"
                 edge="start"
