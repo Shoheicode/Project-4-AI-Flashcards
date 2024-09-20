@@ -11,6 +11,7 @@ export default function InfoCard({ icon, title, subtitle }) {
         borderRadius={5}
         minHeight={"60vh"}
         className="grow"
+        id="box"
       >
         {icon}
         <Typography variant="h3" className="apply">{title}</Typography>

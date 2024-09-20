@@ -86,6 +86,9 @@ export default function Home() {
 
         <Box 
           // sx={{ my: 6 }}
+          sx={{
+            
+          }}
           padding={10}  
           bgcolor={"darkblue"}
           color={"white"}

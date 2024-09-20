@@ -48,3 +48,18 @@
     border-right-color: hsl(0, 0%, 0%);
   }
 }
+
+@media only screen and (max-width: 768px) {
+  /* For desktop: */
+  .grow { 
+    box-shadow: 0 10px 20px 0 rgba(254, 86, 86, 0.2), 0 6px 20px 0 rgba(255, 0, 0, 0.19);
+    transition: all .2s ease-in-out; 
+  }
+  #box{
+    height: 1000px;
+  }
+  
+  .grow:hover { 
+    transform: scale(1.1); 
+  }
+}
