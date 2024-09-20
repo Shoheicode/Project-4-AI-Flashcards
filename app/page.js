@@ -50,6 +50,7 @@ export default function Home() {
           height={"100vh"}
           sx={{ textAlign: "center" }}
           display={"flex"}
+          justifyContent={"center"}
           bgcolor={"black"}  
           color={"white"}
           margin={"0px"}
