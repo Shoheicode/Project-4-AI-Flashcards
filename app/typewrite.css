@@ -60,4 +60,11 @@
     animation: typewriter 4s steps(44) 1s 1 normal both,
       blinkTextCursor 1000ms infinite;
   }
+  .apply{
+    font-family: "Playfair Display", serif!important;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-size: 1000px;
+    font-style: normal;
+  }
 }
