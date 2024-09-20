@@ -54,9 +54,9 @@ export default function Home() {
           justifyContent={"center"}
           alignItems={"center"} 
           color={"white"}
+          bgcolor={"black"}
           margin={"0px"}
           padding={10}
-          className="moving-background-title"
         >
           <Typography variant="h2" component="h1" gutterBottom id="text">
             Welcome to Team AStar <br></br>Flashcard
@@ -87,7 +87,7 @@ export default function Home() {
         <Box 
           // sx={{ my: 6 }
           padding={10}  
-          bgcolor={"darkblue"}
+          bgcolor={"#23d5ab"}
           color={"white"}
           min-height={"100vh"}
         >
