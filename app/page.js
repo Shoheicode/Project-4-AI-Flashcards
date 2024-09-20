@@ -52,11 +52,11 @@ export default function Home() {
           display={"flex"}
           flexDirection={"column"}
           justifyContent={"center"}
-          alignItems={"center"}
-          bgcolor={"black"}  
+          alignItems={"center"} 
           color={"white"}
           margin={"0px"}
           padding={10}
+          className="moving-background-title"
         >
           <Typography variant="h2" component="h1" gutterBottom id="text">
             Welcome to Team AStar <br></br>Flashcard
@@ -85,10 +85,7 @@ export default function Home() {
         </Box>
 
         <Box 
-          // sx={{ my: 6 }}
-          sx={{
-            
-          }}
+          // sx={{ my: 6 }
           padding={10}  
           bgcolor={"darkblue"}
           color={"white"}
