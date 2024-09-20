@@ -89,7 +89,7 @@ export default function Home() {
           padding={10}  
           bgcolor={"darkblue"}
           color={"white"}
-          height={"100vh"}
+          min-height={"100vh"}
         >
           <Typography variant="h2" component="h2" gutterBottom className="apply">
             Features
