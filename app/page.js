@@ -50,7 +50,9 @@ export default function Home() {
           height={"100vh"}
           sx={{ textAlign: "center" }}
           display={"flex"}
+          flexDirection={"column"}
           justifyContent={"center"}
+          alignItems={"center"}
           bgcolor={"black"}  
           color={"white"}
           margin={"0px"}
@@ -62,22 +64,24 @@ export default function Home() {
           <Typography variant="h5" component="h2" gutterBottom className="apply">
             The easiest way to create flashcards from your text.
           </Typography>
-          <Button
-            variant="contained"
-            color="primary"
-            sx={{ mt: 2, mr: 2 }}
-            href="/generate"
-          >
-            Get Started
-          </Button>
-          <Button
-            variant="outlined"
-            color="inherit"
-            sx={{ mt: 2 }}
-            href="/about"
-          >
-            Learn More
-          </Button>
+          <Box>
+            <Button
+              variant="contained"
+              color="primary"
+              sx={{ mt: 2, mr: 2 }}
+              href="/generate"
+            >
+              Get Started
+            </Button>
+            <Button
+              variant="outlined"
+              color="inherit"
+              sx={{ mt: 2 }}
+              href="/about"
+            >
+              Learn More
+            </Button>
+          </Box>
         </Box>
 
         <Box 
