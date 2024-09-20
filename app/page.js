@@ -61,7 +61,7 @@ export default function Home() {
           <Typography variant="h2" component="h1" gutterBottom id="text">
             Welcome to Team AStar <br></br>Flashcard
           </Typography>
-          <Typography variant="h5" component="h2" gutterBottom className="apply">
+          <Typography variant="h5" component="h2" gutterBottom className="apply" id="textSp">
             The easiest way to create flashcards from your text.
           </Typography>
           <Box>
