@@ -49,6 +49,7 @@ export default function Home() {
           width={"100%"}
           height={"100vh"}
           sx={{ textAlign: "center" }}
+          display={"flex"}
           bgcolor={"black"}  
           color={"white"}
           margin={"0px"}
