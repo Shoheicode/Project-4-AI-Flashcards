@@ -1,5 +1,6 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import getStripe from "@/app/utils/getStripe";
+import "./font.css"
 
 export default function PaidTierCard({
   bgcolor,
@@ -41,12 +42,13 @@ export default function PaidTierCard({
         alignItems="center"
         justifyContent="center"
       >
-        <Typography variant="h4">{tierName}</Typography>
-        <Typography variant="h5" sx={{ marginBottom: "0.5em" }}>
+        <Typography variant="h4" className="textStyle">{tierName} </Typography>
+        <Typography variant="h5" className="textStyle" sx={{ marginBottom: "0.5em" }}>
           {price}
         </Typography>
-        <Typography>{description}</Typography>
+        <Typography className="textStyle">{description}</Typography>
         <Button
+          className="textStyle startButton"
           variant="contained"
           color="primary"
           sx={{ fontSize: 16, marginTop: "1.5em" }}
