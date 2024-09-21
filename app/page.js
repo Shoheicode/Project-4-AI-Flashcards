@@ -21,7 +21,6 @@ import InfoCard from "@/components/infoCard/infoCard";
 import Link from "next/link";
 
 import NavBar from "@/components/navbar/navbar";
-import { Padding } from "@mui/icons-material";
 
 export default function Home() {
   const styleBox = {
