@@ -11,8 +11,11 @@ import SearchIcon from '@mui/icons-material/Search';
 import SortIcon from '@mui/icons-material/Sort';
 import InfoIcon from '@mui/icons-material/Info';
 import { Image, Info } from "@mui/icons-material";
+import { useRouter } from "next/navigation";
 
 export default function NavBar(){
+
+  const router = useRouter();
 
   const darkTheme = createTheme({
     palette: {
@@ -115,10 +118,6 @@ export default function NavBar(){
         </Stack>
       </Box>
     );
-
-    if(!isSignedIn){
-      
-    }
 
     if (!isLoaded || !isSignedIn){
       return <ThemeProvider theme={darkTheme}>
