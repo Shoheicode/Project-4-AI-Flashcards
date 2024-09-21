@@ -29,6 +29,10 @@
   font-style: normal;
 }
 
+.getStarted:hover {
+  background-color: aquamarine!important;
+}
+
 @keyframes typewriter {
   from {
     width: 0%;
