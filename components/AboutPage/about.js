@@ -13,6 +13,7 @@ const CoolAboutPage = () => {
     else if (hour < 18) setGreeting('Good afternoon');
     else setGreeting('Good evening');
   }, []);
+  const { isLoaded, isSignedIn, user } = useUser();
 
   const router = useRouter();
 
