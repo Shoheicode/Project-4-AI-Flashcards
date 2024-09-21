@@ -14,8 +14,8 @@ export default function InfoCard({ icon, title, subtitle }) {
         id="box"
       >
         {icon}
-        <Typography variant="h3" className="apply">{title}</Typography>
-        <Typography fontSize={30} className="apply">{subtitle}</Typography>
+        <Typography variant="h3" className="tex">{title}</Typography>
+        <Typography fontSize={30} className="tex">{subtitle}</Typography>
       </Box>
     </Grid>
   );

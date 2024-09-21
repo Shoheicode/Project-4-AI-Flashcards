@@ -119,10 +119,40 @@
   }
 
   .apply{
-    font-family: "Playfair Display", serif!important;
+    font-family: "Rubik", sans-serif!important;
     font-optical-sizing: auto;
     font-weight: 100;
     font-size: 1000px;
+    font-style: normal;
+  }
+  #textSp{
+    font-family: "Rubik", sans-serif;
+    font-size:large;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  /* For desktop: */
+  #text {
+    position: relative;
+    color: hsl(0, 0%, 100%);
+    font-weight: bold!important;
+    font-size: xx-large;
+    font-family: "Rubik", sans-serif!important;
+    letter-spacing: 7px!important;
+    overflow: hidden;
+    text-wrap:stable;
+    border-right: 2px solid hsl(0, 0%, 0%);
+    white-space: nowrap;
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+      blinkTextCursor 1000ms infinite;
+  }
+
+  .apply{
+    font-family: "Rubik", sans-serif!important;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-size: 40px;
     font-style: normal;
   }
   #textSp{
