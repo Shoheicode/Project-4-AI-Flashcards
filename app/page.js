@@ -57,7 +57,13 @@ export default function Home() {
           padding={10}
         >
           <Typography variant="h2" component="h1" gutterBottom id="text">
-            Welcome to <br></br> Team AStar <br></br>Flashcard
+            Welcome to 
+          </Typography>
+          <Typography variant="h2" component="h1" gutterBottom id="text">
+            Team AStar
+          </Typography>
+          <Typography variant="h2" component="h1" gutterBottom id="text">
+            Flashcard
           </Typography>
           <Typography variant="h5" component="h2" gutterBottom className="apply" id="textSp">
             The easiest way to create flashcards from your text.
