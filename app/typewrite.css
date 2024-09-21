@@ -148,8 +148,8 @@
       blinkTextCursor 1000ms infinite;
   }
 
-  #featureSection{
-    padding: 5px;
+  .section{
+    padding: 10vw;
   }
 
   .apply{
