@@ -185,6 +185,12 @@ return (
                 color="primary"
                 onClick={handleSubmit}
                 fullWidth
+                sx={{ 
+                  mt: 2, 
+                  mr: 2,
+                  color: "black",
+                  bgcolor: "#23d5ab",
+                }}
               >
                 Generate Flashcards
               </Button>
@@ -248,6 +254,12 @@ return (
                   <Button 
                     variant='contained'
                     onClick={goToPrevSlide}
+                    sx={{ 
+                      mt: 2, 
+                      mr: 2,
+                      color: "black",
+                      bgcolor: "#23d5ab",
+                    }}
                   >
                     Prev
                   </Button>
@@ -255,9 +267,14 @@ return (
                     {currentIndex + 1}/{flashcards.length}
                   </Typography>
                   <Button
-                    //style={rightArrowStyles}
                     variant='contained'
                     onClick={goToNextSlide}
+                    sx={{ 
+                      mt: 2, 
+                      mr: 2,
+                      color: "black",
+                      bgcolor: "#23d5ab",
+                    }}
                   >
                     Next
                   </Button>
