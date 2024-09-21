@@ -120,7 +120,7 @@
   /* For desktop: */
 
   .section{
-    padding: 10vw;
+    padding: 10vw!important;
   }
 
   #text {
