@@ -51,7 +51,7 @@ export default function PaidTierCard({
           className="textStyle startButton"
           variant="contained"
           color="primary"
-          sx={{ fontSize: 16, marginTop: "1.5em" }}
+          sx={{ fontSize: 16, marginTop: "1.5em", bgcolor: "#23d5ab", color: "black", fontWeight: "bold" }}
           onClick={handleSubmit}
         >
           Choose {tierName}
