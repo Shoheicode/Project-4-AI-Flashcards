@@ -7,6 +7,7 @@ import {
   Container,
   createTheme,
   Grid,
+  ThemeProvider,
   Toolbar,
   Typography,
 } from "@mui/material";
@@ -28,15 +29,6 @@ export default function Home() {
     background:
       "radial-gradient(circle, rgba(35,150,255,1) 0%, rgba(194,240,255,1) 87%, rgba(229,255,104,1) 100%);",
   };
-
-  const darkTheme = createTheme({
-    palette: {
-      mode: 'dark',
-      primary: {
-        main: '#1976d2',
-      },
-    },
-  });
 
   return (
     <Box sx={styleBox} minHeight={"120vh"}>
@@ -71,19 +63,21 @@ export default function Home() {
             The easiest way to create flashcards from your text.
           </Typography>
           <Box>
-            <Button
-              variant="contained"
-              color="primary"
-              sx={{ 
-                mt: 2, 
-                mr: 2,
-                bgcolor: "#23d5ab",
+            <ThemeProvider theme={darkTheme}>
+              <Button
+                variant="contained"
+                color="primary"
+                sx={{ 
+                  mt: 2, 
+                  mr: 2,
+                  bgcolor: "#23d5ab",
 
-              }}
-              href="/generate"
-            >
-              Get Started
-            </Button>
+                }}
+                href="/generate"
+              >
+                Get Started
+              </Button>
+            </ThemeProvider>
             <Button
               variant="outlined"
               color="inherit"
@@ -96,7 +90,6 @@ export default function Home() {
         </Box>
 
         <Box 
-          // sx={{ my: 6 }
           padding={10}  
           bgcolor={"#23d5ab"}
           color={"white"}
