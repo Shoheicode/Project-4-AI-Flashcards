@@ -32,13 +32,15 @@ import NavBar from '@/components/navbar/navbar';
 export default function Generate() {
   
   const { isLoaded, isSignedIn, user } = useUser()
-  //const [flashcards, setFlashcards] = useState([])
   const [text, setText] = useState('')
   const [flashcards, setFlashcards] = useState([])
   const router = useRouter()
+    
+    if(!isSignedIn){
+      router.push("/")
+    }
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  //const [fcards, setFCards] = useState([])
   
   const goToNextSlide = () =>{
     console.log(currentIndex)
@@ -144,7 +146,6 @@ const styleBox = {
 
 return (
     <Box
-      // sx={styleBox}
       className="moving-background-flashcard"
       minHeight={"120vh"}
     >
