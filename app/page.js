@@ -14,8 +14,6 @@ import "./typewrite.css"
 import DevicesIcon from "@mui/icons-material/Devices";
 import TextsmsIcon from "@mui/icons-material/Textsms";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
-import Image from "next/image";
-import { SignedIn, SignedOut, UserButton, SignIn } from "@clerk/nextjs";
 import Head from "next/head";
 import App from "next/app";
 import PaidTierCard from "@/components/paidTierCard/paidTierCard";
