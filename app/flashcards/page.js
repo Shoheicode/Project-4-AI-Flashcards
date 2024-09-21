@@ -29,7 +29,7 @@ export default function Flashcard() {
     const [flashcards, setFlashcards] = useState([])
     const router = useRouter()
     
-    if(!isSignedIn){
+    if(isLoaded && !isSignedIn){
       router.push("/")
     }
   

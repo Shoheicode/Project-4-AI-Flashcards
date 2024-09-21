@@ -32,7 +32,7 @@ export default function Flashcard() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const router = useRouter();
 
-    if(!isSignedIn){
+    if(isLoaded && !isSignedIn){
       router.push("/")
     }
     

@@ -36,7 +36,7 @@ export default function Generate() {
   const [flashcards, setFlashcards] = useState([])
   const router = useRouter()
     
-    if(!isSignedIn){
+    if(isLoaded && !isSignedIn){
       router.push("/")
     }
 

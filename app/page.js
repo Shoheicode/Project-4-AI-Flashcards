@@ -59,10 +59,10 @@ export default function Home() {
           <Typography variant="h2" component="h1" gutterBottom id="text">
             Welcome to 
           </Typography>
-          <Typography variant="h2" component="h1" gutterBottom id="text">
+          <Typography variant="h2" component="h1" gutterBottom id="text1">
             Team AStar
           </Typography>
-          <Typography variant="h2" component="h1" gutterBottom id="text">
+          <Typography variant="h2" component="h1" gutterBottom id="text2">
             Flashcard
           </Typography>
           <Typography variant="h5" component="h2" gutterBottom className="apply" id="textSp">
