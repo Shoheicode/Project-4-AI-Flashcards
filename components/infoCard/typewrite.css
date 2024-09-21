@@ -24,7 +24,7 @@
   }
 }
 
-.tex{
+#tex{
   font-family: "Rubik", sans-serif!important;
 }
 
@@ -56,7 +56,12 @@
   .grow:hover { 
     transform: scale(1.1); 
   }
-  .tex{
+
+  #tex{
+    
+  }
+
+  #tex1{
     
   }
 }
