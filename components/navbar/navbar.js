@@ -18,7 +18,7 @@ export default function NavBar(){
     palette: {
       mode: 'dark',
       primary: {
-        main: '#1976d2',
+        main: '#23d5ab',
       },
     },
   });
@@ -123,7 +123,9 @@ export default function NavBar(){
                   <Toolbar
                   style={
                     {
-                      width: "100%"
+                      width: "100%",
+                      backgroundColor: "#23d5ab",
+                      color: "black"
                     }
                   }
                   >
@@ -159,9 +161,12 @@ export default function NavBar(){
             <Toolbar
               style={
                 {
-                  width: "100%"
+                  width: "100%",
+                  backgroundColor: "#23d5ab",
+                  color: "black"
                 }
               }
+              
             >
               <IconButton
                   size="large"
