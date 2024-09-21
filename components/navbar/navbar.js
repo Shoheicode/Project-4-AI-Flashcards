@@ -119,41 +119,41 @@ export default function NavBar(){
     if (!isLoaded || !isSignedIn){
       console.log("HIHIHII")
       return <ThemeProvider theme={darkTheme}>
-                <AppBar position="static" color={"secondary"}>
-                  <Toolbar
-                  style={
-                    {
-                      width: "100%",
-                      backgroundColor: "#23d5ab",
-                      color: "black"
-                    }
-                  }
-                  >
-                    <Link href={"/"} style={{ flexGrow: 1 }}>
-                      <Typography variant="h6">
-                        AStar Flashcard
-                      </Typography>
-                    </Link>
-                    <SignedOut>
-                      <Button color="inherit" href="/sign-in">
-                        Login
-                      </Button>
-                      <Button color="inherit" href="/sign-up">
-                        Sign Up
-                      </Button>
-                    </SignedOut>
-                    <SignedIn>
-                      
-                      <UserButton />
-                    </SignedIn>
-                  </Toolbar>
-              </AppBar>
+        <AppBar position="static" color={"secondary"}>
+          <Toolbar
+          style={
+            {
+              width: "100%",
+              backgroundColor: "#23d5ab",
+              color: "black"
+            }
+          }
+          >
+            <Link href={"/"} style={{ flexGrow: 1 }}>
+              <Typography variant="h6">
+                AStar Flashcard
+              </Typography>
+            </Link>
+            <SignedOut>
+              <Button color="inherit" href="/sign-in">
+                Login
+              </Button>
+              <Button color="inherit" href="/sign-up">
+                Sign Up
+              </Button>
+            </SignedOut>
+            <SignedIn>
+              
+              <UserButton />
+            </SignedIn>
+          </Toolbar>
+        </AppBar>
               <Drawer
                     open={open} onClose={toggleDrawer(false)}
                   >
                     {EmptyDrawerList}
               </Drawer>
-            </ThemeProvider>;
+      </ThemeProvider>;
     }
 
     return <ThemeProvider theme={darkTheme}>
