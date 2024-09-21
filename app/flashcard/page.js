@@ -22,6 +22,7 @@ import {
   CardActionArea,
   Stack,
 } from '@mui/material'
+import { useRouter } from "next/navigation";
 import NavBar from "@/components/navbar/navbar"
 
 export default function Flashcard() {
