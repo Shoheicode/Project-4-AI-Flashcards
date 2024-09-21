@@ -29,7 +29,11 @@ export default function Flashcard() {
     const [flashcards, setFlashcards] = useState([])
     const [flipped, setFlipped] = useState({})
     const [currentIndex, setCurrentIndex] = useState(0);
-    //const [fcards, setFCards] = useState([])
+    const router = useRouter();
+
+    if(!isSignedIn){
+      router.push("/")
+    }
     
     const goToNextSlide = () =>{
       console.log(currentIndex)
