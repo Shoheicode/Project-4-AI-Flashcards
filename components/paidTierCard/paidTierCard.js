@@ -1,6 +1,7 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import getStripe from "@/app/utils/getStripe";
 import "./font.css"
+import "./general.css"
 
 export default function PaidTierCard({
   bgcolor,
