@@ -41,6 +41,7 @@ export default function PaidTierCard({
         flexDirection="column"
         alignItems="center"
         justifyContent="center"
+        className="boxT"
       >
         <Typography variant="h4" className="textStyle1">{tierName} </Typography>
         <Typography variant="h5" className="textStyle2" sx={{ marginBottom: "0.5em" }}>
