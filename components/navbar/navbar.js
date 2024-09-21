@@ -117,7 +117,6 @@ export default function NavBar(){
     );
 
     if (!isLoaded || !isSignedIn){
-      console.log("HIHIHII")
       return <ThemeProvider theme={darkTheme}>
         <AppBar position="static" color={"secondary"}>
           <Toolbar
