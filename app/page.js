@@ -63,7 +63,6 @@ export default function Home() {
             The easiest way to create flashcards from your text.
           </Typography>
           <Box>
-            <ThemeProvider theme={darkTheme}>
               <Button
                 variant="contained"
                 color="primary"
@@ -77,7 +76,6 @@ export default function Home() {
               >
                 Get Started
               </Button>
-            </ThemeProvider>
             <Button
               variant="outlined"
               color="inherit"
