@@ -5,9 +5,9 @@ import { useUser } from "@clerk/nextjs";
 import { Box, Button, Stack, TextField } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { useState, Fragment } from "react";
-const { isLoaded, isSignedIn, user } = useUser();
 
 export default function Home() {
+  const { isLoaded, isSignedIn, user } = useUser();
   const router = useRouter();
 
   if(!isSignedIn){
