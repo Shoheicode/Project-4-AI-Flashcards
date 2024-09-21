@@ -64,6 +64,7 @@ export default function Home() {
           </Typography>
           <Box>
             <Button
+              className="getStarted"
               variant="contained"
               color="primary"
               sx={{ 
