@@ -132,7 +132,8 @@ export default function Home() {
 
         <Box sx={{textAlign: "center" }}
           padding={10}
-          bgcolor={"lightgrey"}
+          bgcolor={"white"}
+          className="boxT"
         >
           <Typography variant="h3" component="h2" gutterBottom color={"black"} className="apply title">
             Pricing
