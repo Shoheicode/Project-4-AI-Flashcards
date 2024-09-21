@@ -152,12 +152,13 @@ return (
       <NavBar />
       <Container maxWidth="md">
         <Box minHeight={"90vh"}>
-          <Box 
+          <Stack 
             sx={{ my: 4 }} 
             display={"flex"}
             flexDirection={"column"}
             justifyContent={"center"}
             alignItems={"center"}
+            spacing={3}
           >
             <Typography variant="h4" component="h1" gutterBottom id='generateText'>
               Generate Flashcards
@@ -178,15 +179,17 @@ return (
               sx={{ mb: 2 }}
             />
             </Box>
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={handleSubmit}
-              fullWidth
-            >
-              Generate Flashcards
-            </Button>
-          </Box>
+            <Box>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={handleSubmit}
+                fullWidth
+              >
+                Generate Flashcards
+              </Button>
+            </Box>
+          </Stack>
 
             {flashcards.length > 0 && (<Box>
               <Stack gap={3}>
