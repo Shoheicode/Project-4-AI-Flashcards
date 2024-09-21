@@ -5,6 +5,12 @@ import { Box, Button, Stack, TextField } from "@mui/material";
 import { useState, Fragment } from "react";
 
 export default function Home() {
+  const router = useRouter();
+
+  if(!isSignedIn){
+    router.push("/")
+  }
+
   return (
     <Box>
         <NavBar />
