@@ -29,21 +29,6 @@
   text-wrap:stable;
   border-right: 2px solid hsl(0, 0%, 0%);
   white-space: nowrap;
-  animation: typewriter1 4s steps(44) 1s 1 normal both,
-    blinkTextCursor 4000ms;
-}
-
-#text2 {
-  position: relative;
-  color: hsl(0, 0%, 100%);
-  font-weight:normal!important;
-  font-family: "Rubik", sans-serif!important;
-  font-size: 70px;
-  letter-spacing: 7px!important;
-  overflow: hidden;
-  text-wrap:stable;
-  border-right: 2px solid hsl(0, 0%, 0%);
-  white-space: nowrap;
   animation: typewriter 4s steps(44) 1s 1 normal both,
     blinkTextCursor 1000ms infinite;
 }
@@ -133,12 +118,32 @@
 
 @media only screen and (max-width: 500px) {
   /* For desktop: */
+
+  .section{
+    padding: 10vw;
+  }
+
   #text {
     position: relative;
     color: hsl(0, 0%, 100%);
-    font-weight: bold!important;
-    font-size: xx-large;
+    font-weight:normal!important;
     font-family: "Rubik", sans-serif!important;
+    font-size: 30px;
+    letter-spacing: 7px!important;
+    overflow: hidden;
+    text-wrap:stable;
+    border-right: 2px solid hsl(0, 0%, 0%);
+    white-space: nowrap;
+    animation: typewriter1 4s steps(44) 1s 1 normal both,
+      blinkTextCursor 4000ms;
+  }
+  
+  #text1 {
+    position: relative;
+    color: hsl(0, 0%, 100%);
+    font-weight:normal!important;
+    font-family: "Rubik", sans-serif!important;
+    font-size: 30px;
     letter-spacing: 7px!important;
     overflow: hidden;
     text-wrap:stable;
@@ -148,8 +153,24 @@
       blinkTextCursor 1000ms infinite;
   }
 
-  .section{
-    padding: 10vw;
+  @keyframes typewriter {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes typewriter1 {
+    from {
+      width: 0%;
+      border-right-color: white;
+    }
+    to {
+      width: 100%;
+      border-right-color: black;
+    }
   }
 
   .apply{

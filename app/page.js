@@ -55,6 +55,7 @@ export default function Home() {
           bgcolor={"black"}
           margin={"0px"}
           padding={10}
+          className="section"
         >
           <Typography variant="h2" component="h1" gutterBottom id="text">
             Welcome to 
