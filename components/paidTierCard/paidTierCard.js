@@ -42,8 +42,8 @@ export default function PaidTierCard({
         alignItems="center"
         justifyContent="center"
       >
-        <Typography variant="h4" className="textStyle">{tierName} </Typography>
-        <Typography variant="h5" className="textStyle" sx={{ marginBottom: "0.5em" }}>
+        <Typography variant="h4" className="textStyle1">{tierName} </Typography>
+        <Typography variant="h5" className="textStyle2" sx={{ marginBottom: "0.5em" }}>
           {price}
         </Typography>
         <Typography className="textStyle">{description}</Typography>
@@ -51,7 +51,7 @@ export default function PaidTierCard({
           className="textStyle startButton"
           variant="contained"
           color="primary"
-          sx={{ fontSize: 16, marginTop: "1.5em", bgcolor: "#23d5ab", color: "black", fontWeight: "bold" }}
+          sx={{ fontSize: 16, marginTop: "1.5em", bgcolor: "#23d5ab", color: "black" }}
           onClick={handleSubmit}
         >
           Choose {tierName}
