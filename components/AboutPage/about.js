@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import './style.css'
+import { useRouter } from 'next/navigation';
 
 const CoolAboutPage = () => {
   const [greeting, setGreeting] = useState('');
@@ -12,6 +13,12 @@ const CoolAboutPage = () => {
     else if (hour < 18) setGreeting('Good afternoon');
     else setGreeting('Good evening');
   }, []);
+
+  const router = useRouter();
+
+  if(!isSignedIn){
+    router.push("/")
+  }
 
   return (
     <div className="container">
