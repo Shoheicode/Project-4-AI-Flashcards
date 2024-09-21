@@ -191,6 +191,7 @@ return (
                   color: "black",
                   bgcolor: "#23d5ab",
                 }}
+                className="buttonC"
               >
                 Generate Flashcards
               </Button>
@@ -260,6 +261,7 @@ return (
                       color: "black",
                       bgcolor: "#23d5ab",
                     }}
+                    className="buttonC"
                   >
                     Prev
                   </Button>
@@ -275,6 +277,7 @@ return (
                       color: "black",
                       bgcolor: "#2F6542",
                     }}
+                    className="buttonC"
                   >
                     Next
                   </Button>
@@ -284,7 +287,9 @@ return (
             )}
               {flashcards.length > 0 && (
                   <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center' }}>
-                      <Button variant="contained" color="primary" onClick={handleOpenDialog}>
+                      <Button variant="contained" color="primary" onClick={handleOpenDialog}
+                        className="buttonC"
+                      >
                         Save Flashcards
                       </Button>
                   </Box>
