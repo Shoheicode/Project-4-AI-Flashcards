@@ -148,6 +148,10 @@
       blinkTextCursor 1000ms infinite;
   }
 
+  #featureSection{
+    padding: 5px;
+  }
+
   .apply{
     font-family: "Rubik", sans-serif!important;
     font-optical-sizing: auto;
