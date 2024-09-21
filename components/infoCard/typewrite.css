@@ -28,6 +28,10 @@
   font-family: "Rubik", sans-serif!important;
 }
 
+#tex1{
+  font-family: "Rubik", sans-serif!important;
+}
+
 @media only screen and (max-width: 768px) {
   /* For desktop: */
   .grow { 
