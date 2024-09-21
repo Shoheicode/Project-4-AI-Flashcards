@@ -99,7 +99,7 @@ export default function Home() {
           bgcolor={"#23d5ab"}
           color={"white"}
           min-height={"100vh"}
-          id="featureSection"
+          className="section"
         >
           <Typography variant="h2" component="h2" gutterBottom className="apply"
             sx={
@@ -134,6 +134,7 @@ export default function Home() {
         <Box sx={{textAlign: "center" }}
           padding={10}
           bgcolor={"white"}
+          className="section"
         >
           <Typography variant="h3" component="h2" gutterBottom color={"black"} className="apply title">
             Pricing
