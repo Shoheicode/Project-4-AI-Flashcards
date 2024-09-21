@@ -157,49 +157,49 @@ export default function NavBar(){
     }
 
     return <ThemeProvider theme={darkTheme}>
-        <AppBar position="static" color={"secondary"}>
-          <Toolbar
-            style={
-              {
-                width: "100%",
-                backgroundColor: "#23d5ab",
-                color: "black"
-              }
+      <AppBar position="static" color={"secondary"}>
+        <Toolbar
+          style={
+            {
+              width: "100%",
+              backgroundColor: "#23d5ab",
+              color: "black"
             }
+          }
+          
+        >
+          <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ 
+                mr: 2 
+              }}
+              onClick={toggleDrawer(true)}
+            >
+            <MenuIcon>
+            </MenuIcon>
+          </IconButton>
+          <Link href={"/"} style={{ flexGrow: 1 }}>
+            <Typography variant="h6">
+              AStar Flashcard
+            </Typography>
+          </Link>
+          <SignedOut>
+            <Button color="inherit" href="/sign-in">
+              Login
+            </Button>
+            <Button color="inherit" href="/sign-up">
+              Sign Up
+            </Button>
+          </SignedOut>
+          <SignedIn>
             
-          >
-            <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-                sx={{ 
-                  mr: 2 
-                }}
-                onClick={toggleDrawer(true)}
-              >
-              <MenuIcon>
-              </MenuIcon>
-            </IconButton>
-            <Link href={"/"} style={{ flexGrow: 1 }}>
-              <Typography variant="h6">
-                AStar Flashcard
-              </Typography>
-            </Link>
-            <SignedOut>
-              <Button color="inherit" href="/sign-in">
-                Login
-              </Button>
-              <Button color="inherit" href="/sign-up">
-                Sign Up
-              </Button>
-            </SignedOut>
-            <SignedIn>
-              
-              <UserButton />
-            </SignedIn>
-          </Toolbar>
-        </AppBar>
+            <UserButton />
+          </SignedIn>
+        </Toolbar>
+      </AppBar>
         <Drawer
               open={open} onClose={toggleDrawer(false)}
             >
