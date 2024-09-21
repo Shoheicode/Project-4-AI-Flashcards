@@ -128,7 +128,7 @@ export default function Home() {
           padding={10}
           bgcolor={"lightgrey"}
         >
-          <Typography variant="h3" component="h2" gutterBottom color={"black"} className="apply">
+          <Typography variant="h3" component="h2" gutterBottom color={"black"} className="apply title">
             Pricing
           </Typography>
           <Grid container spacing={4} justifyContent="center">
