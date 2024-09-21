@@ -99,6 +99,7 @@ export default function Home() {
           bgcolor={"#23d5ab"}
           color={"white"}
           min-height={"100vh"}
+          id="featureSection"
         >
           <Typography variant="h2" component="h2" gutterBottom className="apply"
             sx={
@@ -109,10 +110,10 @@ export default function Home() {
           >
             Features
           </Typography>
-          <Grid container spacing={4}>
+          <Grid container spacing={4}
+          >
             {/* Feature items */}
             <InfoCard
-              
               icon={<TextsmsIcon />}
               title="Text to Cards in Seconds"
               subtitle="Transform your notes with just a few keystrokes"
