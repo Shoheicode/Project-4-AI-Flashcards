@@ -68,7 +68,12 @@ export default function Home() {
             <Button
               variant="contained"
               color="primary"
-              sx={{ mt: 2, mr: 2 }}
+              sx={{ 
+                mt: 2, 
+                mr: 2,
+                bgcolor: "#23d5ab",
+
+              }}
               href="/generate"
             >
               Get Started
