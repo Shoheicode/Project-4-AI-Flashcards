@@ -116,6 +116,10 @@ export default function NavBar(){
       </Box>
     );
 
+    if(!isSignedIn){
+      
+    }
+
     if (!isLoaded || !isSignedIn){
       return <ThemeProvider theme={darkTheme}>
         <AppBar position="static" color={"secondary"}>
