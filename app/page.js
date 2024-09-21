@@ -70,6 +70,7 @@ export default function Home() {
               sx={{ 
                 mt: 2, 
                 mr: 2,
+                color: "black",
                 bgcolor: "#23d5ab",
               }}
               href="/generate"
@@ -93,7 +94,13 @@ export default function Home() {
           color={"white"}
           min-height={"100vh"}
         >
-          <Typography variant="h2" component="h2" gutterBottom className="apply">
+          <Typography variant="h2" component="h2" gutterBottom className="apply"
+            sx={
+              {
+                color:"black"
+              }
+            }
+          >
             Features
           </Typography>
           <Grid container spacing={4}>
