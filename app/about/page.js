@@ -2,6 +2,7 @@
 import About from "@/components/AboutPage/about";
 import NavBar from "@/components/navbar/navbar";
 import { Box, Button, Stack, TextField } from "@mui/material";
+import { useRouter } from "next/navigation";
 import { useState, Fragment } from "react";
 
 export default function Home() {
