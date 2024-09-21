@@ -200,10 +200,10 @@ export default function NavBar(){
           </SignedIn>
         </Toolbar>
       </AppBar>
-        <Drawer
-              open={open} onClose={toggleDrawer(false)}
-            >
-              {DrawerList}
-        </Drawer>
+      <Drawer
+            open={open} onClose={toggleDrawer(false)}
+          >
+            {DrawerList}
+      </Drawer>
       </ThemeProvider>;
 }
