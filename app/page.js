@@ -63,19 +63,18 @@ export default function Home() {
             The easiest way to create flashcards from your text.
           </Typography>
           <Box>
-              <Button
-                variant="contained"
-                color="primary"
-                sx={{ 
-                  mt: 2, 
-                  mr: 2,
-                  bgcolor: "#23d5ab",
-
-                }}
-                href="/generate"
-              >
-                Get Started
-              </Button>
+            <Button
+              variant="contained"
+              color="primary"
+              sx={{ 
+                mt: 2, 
+                mr: 2,
+                bgcolor: "#23d5ab",
+              }}
+              href="/generate"
+            >
+              Get Started
+            </Button>
             <Button
               variant="outlined"
               color="inherit"
