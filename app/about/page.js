@@ -8,11 +8,6 @@ import { useState, Fragment } from "react";
 
 export default function Home() {
   const { isLoaded, isSignedIn, user } = useUser();
-  const router = useRouter();
-
-  if(!isSignedIn){
-    router.push("/")
-  }
 
   return (
     <Box>

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import './style.css'
 import { useRouter } from 'next/navigation';
+import { useUser } from '@clerk/nextjs';
 
 const CoolAboutPage = () => {
   const [greeting, setGreeting] = useState('');
@@ -17,7 +18,7 @@ const CoolAboutPage = () => {
 
   const router = useRouter();
 
-  if(!isSignedIn){
+  if(isLoaded && !isSignedIn){
     router.push("/")
   }
 
