@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Analytics } from "@vercel/analytics/react"
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,6 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
+      <Head>
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+      </Head>
       <html lang="en">
         <body className={inter.className}>
           {children}
