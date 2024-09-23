@@ -14,9 +14,9 @@ import {
 import './flashcards.css'
 
 import { database } from "@/app/firebase";
-import { collection, doc, getDoc, setDoc, addDoc } from 'firebase/firestore';
+import { collection, doc, getDoc, setDoc} from 'firebase/firestore';
 import { useRouter } from 'next/navigation';
-import { SignedIn, SignedOut, UserButton, useUser } from '@clerk/nextjs';
+import { useUser } from '@clerk/nextjs';
 import Link from 'next/link';
 import NavBar from '@/components/navbar/navbar';
 import SplitButton from '@/components/SplitButton/spilitButton';
