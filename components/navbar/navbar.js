@@ -27,8 +27,6 @@ export default function NavBar(){
       },
     },
   });
-  
-  useEffect(() => {});
 
     const [open, setOpen] = React.useState(false);
     
