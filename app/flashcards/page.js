@@ -111,7 +111,7 @@ export default function Flashcard() {
       ) 
 }
 
-const options = ['Create a merge commit', 'Squash and merge', 'Rebase and merge'];
+const options = ['Recent', 'Subject', 'Created'];
 
 function SplitButton() {
   const [open, setOpen] = React.useState(false);
