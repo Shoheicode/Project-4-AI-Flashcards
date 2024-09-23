@@ -66,7 +66,7 @@ export default function NavBar(){
             </ListItemButton>
           </ListItem>
           <ListItem key={"About"} disablePadding>
-            <ListItemButton href="/about">
+            <ListItemButton href="/about" className="textStyle">
               <ListItemIcon>
                 <Info></Info>
               </ListItemIcon>
