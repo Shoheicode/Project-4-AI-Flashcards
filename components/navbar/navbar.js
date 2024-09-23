@@ -46,7 +46,7 @@ export default function NavBar(){
               <ListItemIcon>
                 <HomeIcon></HomeIcon>
               </ListItemIcon>
-              <ListItemText primary={"AStar Flashcards"} />
+              <ListItemText primary={"AStar Flashcards"} className="textStyle"/>
             </ListItemButton>
           </ListItem>
           <ListItem key={"Create Flashcards"} disablePadding>
@@ -54,7 +54,7 @@ export default function NavBar(){
               <ListItemIcon>
                 <CreateIcon></CreateIcon>
               </ListItemIcon>
-              <ListItemText primary={"Create"} />
+              <ListItemText primary={"Create"} className="textStyle"/>
             </ListItemButton>
           </ListItem>
           <ListItem key={"Load Flashcards"} disablePadding>
@@ -62,7 +62,7 @@ export default function NavBar(){
               <ListItemIcon>
                 <SortIcon></SortIcon>
               </ListItemIcon>
-              <ListItemText primary={"Load"} />
+              <ListItemText primary={"Load"} className="textStyle"/>
             </ListItemButton>
           </ListItem>
           <ListItem key={"About"} disablePadding>
@@ -70,7 +70,7 @@ export default function NavBar(){
               <ListItemIcon>
                 <Info></Info>
               </ListItemIcon>
-              <ListItemText primary={"About"} />
+              <ListItemText primary={"About"} className="textStyle"/>
             </ListItemButton>
           </ListItem>
         </List>
@@ -89,6 +89,7 @@ export default function NavBar(){
           </SignedIn>
           <Typography
             fontSize={20}
+            className="textStyle"
           >
             {isLoaded && isSignedIn && user.fullName}
           </Typography>
@@ -190,10 +191,10 @@ export default function NavBar(){
             </Typography>
           </Link>
           <SignedOut>
-            <Button color="inherit" href="/sign-in">
+            <Button color="inherit" href="/sign-in" className="textStyle">
               Login
             </Button>
-            <Button color="inherit" href="/sign-up">
+            <Button color="inherit" href="/sign-up" className="textStyle">
               Sign Up
             </Button>
           </SignedOut>
