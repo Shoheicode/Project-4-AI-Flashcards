@@ -24,7 +24,6 @@ import NavBar from '@/components/navbar/navbar';
 
 export default function Flashcard() {
     //gets the user
-    
     const { isLoaded, isSignedIn, user } = useUser()
     const [flashcards, setFlashcards] = useState([])
     const router = useRouter()
