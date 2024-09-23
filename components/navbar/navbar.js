@@ -13,6 +13,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import { Image, Info } from "@mui/icons-material";
 import { useRouter } from "next/navigation";
 import './navbar.css'
+import { useEffect } from "react";
 
 export default function NavBar(){
 
@@ -26,6 +27,8 @@ export default function NavBar(){
       },
     },
   });
+  
+  useEffect(() => {});
 
     const [open, setOpen] = React.useState(false);
     
