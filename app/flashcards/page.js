@@ -19,6 +19,7 @@ import { useRouter } from 'next/navigation';
 import { SignedIn, SignedOut, UserButton, useUser } from '@clerk/nextjs';
 import Link from 'next/link';
 import NavBar from '@/components/navbar/navbar';
+import SplitButton from '@/components/SplitButton/spilitButton';
 
 export default function Flashcard() {
     //gets the user
@@ -77,6 +78,9 @@ export default function Flashcard() {
               <Typography variant="h4" component="h1" gutterBottom >
                 Cards
               </Typography>
+
+              <SplitButton/>
+              
               <Grid container spacing={3} sx={{ mt: 4 }}>
                 {flashcards.map((flashcard, index) => (
                   <Grid item xs={12} sm={6} md={4} key={index}>
