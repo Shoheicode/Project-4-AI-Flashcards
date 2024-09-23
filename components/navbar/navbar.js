@@ -12,6 +12,7 @@ import SortIcon from '@mui/icons-material/Sort';
 import InfoIcon from '@mui/icons-material/Info';
 import { Image, Info } from "@mui/icons-material";
 import { useRouter } from "next/navigation";
+import './navbar.css'
 
 export default function NavBar(){
 
@@ -132,12 +133,12 @@ export default function NavBar(){
           }
           >
             <Link href={"/"} style={{ flexGrow: 1 }}>
-              <Typography variant="h6">
+              <Typography variant="h6" className="textStyle">
                 AStar Flashcard
               </Typography>
             </Link>
             <SignedOut>
-              <Button color="inherit" href="/sign-in">
+              <Button color="inherit" href="/sign-in" >
                 Login
               </Button>
               <Button color="inherit" href="/sign-up">
@@ -184,7 +185,7 @@ export default function NavBar(){
             </MenuIcon>
           </IconButton>
           <Link href={"/"} style={{ flexGrow: 1 }}>
-            <Typography variant="h6" className="titleText">
+            <Typography variant="h6" className="textStyle">
               AStar Flashcard
             </Typography>
           </Link>
