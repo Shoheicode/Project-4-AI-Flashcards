@@ -3,17 +3,15 @@
 import { useState, useEffect } from 'react'
 import {
   Container,
-  TextField,
-  Button,
   Typography,
   Box,
   Grid,
   Card,
   CardActionArea,
   CardContent,
-  AppBar,
-  Toolbar
 } from '@mui/material'
+
+import './flashcards.css'
 
 import { database } from "@/app/firebase";
 import { collection, doc, getDoc, setDoc, addDoc } from 'firebase/firestore';
@@ -76,7 +74,7 @@ export default function Flashcard() {
               minHeight={"100vh"}
               padding={10}
             >
-              <Typography>
+              <Typography variant="h4" component="h1" gutterBottom >
                 Cards
               </Typography>
               <Grid container spacing={3} sx={{ mt: 4 }}>
