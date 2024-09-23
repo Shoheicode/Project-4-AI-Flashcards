@@ -102,7 +102,7 @@ export default function Home() {
           min-height={"100vh"}
           className="section"
         >
-          <Typography variant="h2" component="h2" gutterBottom className="apply"
+          <Typography variant="h2" component="h2" gutterBottom className="apply title"
             sx={
               {
                 color:"black"
@@ -137,7 +137,7 @@ export default function Home() {
           bgcolor={"white"}
           className="section"
         >
-          <Typography variant="h3" component="h2" gutterBottom color={"black"} className="apply title">
+          <Typography variant="h2" component="h2" gutterBottom color={"black"} className="apply title">
             Pricing
           </Typography>
           <Grid container spacing={4} justifyContent="center">
