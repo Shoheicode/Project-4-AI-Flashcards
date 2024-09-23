@@ -35,7 +35,7 @@ export default function Home() {
       <Head>
         <title>Flashcard Study Tool</title>
         <meta name="description" content="Flashcard Study Tool" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon1.ico" />
       </Head>
 
       <NavBar />
