@@ -184,7 +184,7 @@ export default function NavBar(){
             </MenuIcon>
           </IconButton>
           <Link href={"/"} style={{ flexGrow: 1 }}>
-            <Typography variant="h6">
+            <Typography variant="h6" className="titleText">
               AStar Flashcard
             </Typography>
           </Link>
