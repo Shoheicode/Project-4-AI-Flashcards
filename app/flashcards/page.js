@@ -89,6 +89,7 @@ export default function Flashcard() {
                 sx={{
                   color:"white",
                 }}
+                
               >
                 Cards
               </Typography>
