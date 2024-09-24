@@ -100,11 +100,6 @@ export default function Flashcard() {
                   <Grid item xs={12} sm={6} md={4} key={index}>
                     <Card>
                       <CardActionArea onClick={() => handleCardClick(flashcard.name)}>
-                        {/* <CardContent>
-                          <Typography variant="h5" component="div">
-                            {flashcard.name}
-                          </Typography>
-                        </CardContent> */}
                         <FileCard
                           fileName={flashcard.name}
                           fileType="folder"
