@@ -1,0 +1,123 @@
+.app-container {
+    display: flex;
+    gap: 24px;
+    padding: 40px;
+    background-color: #f3f4f6;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cool-card {
+    width: 288px;
+    height: 384px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .cool-card.hovered {
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cool-card .card-content {
+    height: 100%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cool-card.folder .card-content {
+    background: linear-gradient(to bottom right, #fbbf24, #f97316);
+  }
+  
+  .cool-card.file .card-content {
+    background: linear-gradient(to bottom right, #60a5fa, #6366f1);
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+  
+  .file-info {
+    color: white;
+  }
+  
+  .file-name {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .last-modified {
+    font-size: 0.875rem;
+    opacity: 0.8;
+  }
+  
+  .more-button {
+    background: none;
+    border: none;
+    color: white;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  
+  .more-button:hover {
+    opacity: 1;
+  }
+  
+  .icon-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-container svg {
+    color: white;
+    opacity: 0.9;
+  }
+  
+  .card-footer {
+    margin-top: 16px;
+  }
+  
+  .file-size {
+    color: white;
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .action-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .action-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .action-button svg {
+    margin-right: 8px;
+  }
