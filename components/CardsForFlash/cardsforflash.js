@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { File, Folder, MoreVertical, Download, Share2 } from 'lucide-react';
+import './cardsforflash.css'
 
 export default function FileCard({ fileName, fileType, fileSize, lastModified }){
   const [isHovered, setIsHovered] = useState(false);
