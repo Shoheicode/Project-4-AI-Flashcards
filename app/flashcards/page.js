@@ -111,7 +111,7 @@ export default function Flashcard() {
       ) 
 }
 
-const options = ['Recent', 'Subject', 'Created'];
+const options = ['Recent', 'Created'];
 
 function SplitButton() {
   const [open, setOpen] = React.useState(false);
