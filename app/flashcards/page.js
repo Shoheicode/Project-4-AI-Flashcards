@@ -80,7 +80,7 @@ export default function Flashcard() {
           minHeight={"120vh"}
         >
            <NavBar />
-          <Container maxWidth="md">
+          <Container>
             <Box 
               width={"100%"}
               minHeight={"100vh"}
@@ -98,7 +98,7 @@ export default function Flashcard() {
               <Grid container spacing={3} sx={{ mt: 4 }}>
                 {flashcards.map((flashcard, index) => (
                   <Grid item xs={12} sm={6} md={4} key={index}>
-                    <Card>
+                    
                       <CardActionArea onClick={() => handleCardClick(flashcard.name)}>
                         <FileCard
                           fileName={flashcard.name}
@@ -107,7 +107,7 @@ export default function Flashcard() {
                           lastModified="Modified 2 days ago"
                         />
                       </CardActionArea>
-                    </Card>
+                    
                   </Grid>
                 ))}
               </Grid>
