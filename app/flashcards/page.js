@@ -29,6 +29,7 @@ import { collection, doc, getDoc, setDoc} from 'firebase/firestore';
 import { useRouter } from 'next/navigation';
 import { useUser } from '@clerk/nextjs';
 import NavBar from '@/components/navbar/navbar';
+import FileCard from '@/components/CardsForFlash/cardsforflash';
 
 export default function Flashcard() {
     //gets the user
@@ -104,7 +105,12 @@ export default function Flashcard() {
                             {flashcard.name}
                           </Typography>
                         </CardContent> */}
-                        
+                        <FileCard
+                          fileName={flashcard.name}
+                          fileType="folder"
+                          fileSize="1.2 GB"
+                          lastModified="Modified 2 days ago"
+                        />
                       </CardActionArea>
                     </Card>
                   </Grid>
