@@ -68,8 +68,9 @@ export default function Flashcard() {
         router.push(`/flashcard?id=${id}`)
       }
       const styleBox = {
-        background: "rgb(35,150,255);",
-        background: "radial-gradient(circle, rgba(35,150,255,1) 0%, rgba(194,240,255,1) 87%, rgba(229,255,104,1) 100%);"  
+        // background: "rgb(35,150,255);",
+        // background: "radial-gradient(circle, rgba(35,150,255,1) 0%, rgba(194,240,255,1) 87%, rgba(229,255,104,1) 100%);"  
+        background: "rgb(40,43,42);"
       }
     
       return (
