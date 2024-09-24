@@ -99,11 +99,12 @@ export default function Flashcard() {
                   <Grid item xs={12} sm={6} md={4} key={index}>
                     <Card>
                       <CardActionArea onClick={() => handleCardClick(flashcard.name)}>
-                        <CardContent>
+                        {/* <CardContent>
                           <Typography variant="h5" component="div">
                             {flashcard.name}
                           </Typography>
-                        </CardContent>
+                        </CardContent> */}
+                        
                       </CardActionArea>
                     </Card>
                   </Grid>

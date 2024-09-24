@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { File, Folder, MoreVertical, Download, Share2 } from 'lucide-react';
 
-const CoolCard = ({ fileName, fileType, fileSize, lastModified }) => {
+export default CoolCard = ({ fileName, fileType, fileSize, lastModified }) => {
   const [isHovered, setIsHovered] = useState(false);
   const isFolder = fileType === 'folder';
 
@@ -53,22 +53,3 @@ const CoolCard = ({ fileName, fileType, fileSize, lastModified }) => {
     </div>
   );
 };
-
-export default function App() {
-  return (
-    <div className="flex space-x-6 p-10 bg-gray-100 min-h-screen items-center justify-center">
-      <CoolCard
-        fileName="Project Files"
-        fileType="folder"
-        fileSize="1.2 GB"
-        lastModified="Modified 2 days ago"
-      />
-      <CoolCard
-        fileName="Annual_Report.pdf"
-        fileType="file"
-        fileSize="15.7 MB"
-        lastModified="Modified yesterday"
-      />
-    </div>
-  );
-}
