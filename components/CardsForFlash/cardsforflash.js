@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { File, Folder, MoreVertical, Download, Share2 } from 'lucide-react';
 
-export default function CoolCard({ fileName, fileType, fileSize, lastModified }){
+export default function FileCard({ fileName, fileType, fileSize, lastModified }){
   const [isHovered, setIsHovered] = useState(false);
   const isFolder = fileType === 'folder';
 
