@@ -103,7 +103,7 @@ export default function Flashcard() {
                         <FileCard
                           fileName={flashcard.name}
                           fileType="folder"
-                          fileSize="1.2 GB"
+                          fileSize="1.2"
                           lastModified="Modified 2 days ago"
                         />
                       </CardActionArea>
