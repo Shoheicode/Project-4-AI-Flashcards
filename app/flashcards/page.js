@@ -36,6 +36,8 @@ export default function Flashcard() {
     const { isLoaded, isSignedIn, user } = useUser()
     const [flashcards, setFlashcards] = useState([])
     const router = useRouter()
+
+    const [flashs, setFlashs] = useState({})
     
     if(isLoaded && !isSignedIn){
       router.push("/")
@@ -51,8 +53,13 @@ export default function Flashcard() {
           if (docSnap.exists()) {
             const collections = docSnap.data().flashcardSets || []
 
+            let total = {}
+
             for(var i = 0; i < collections.length; i++){
-              console.log("HIHIHI")
+              const documentReference = doc(collection(doc(collection(database, 'users'), user.id), "flashcardSets"), collections[i])
+              const docy = await getDoc(documentReference)
+              console.log(collections[i].name)
+              total[collections.name] = docy.timestamp
             }
 
             setFlashcards(collections)
