@@ -81,7 +81,7 @@ export default function Generate() {
       }
   
       const setDocRef = doc(collection(userDocRef, 'flashcardSets'), setName)
-      batch.set(setDocRef, { flashcards })
+      batch.set(setDocRef, { flashcards, timestamp: serverTimestamp() })
   
       await batch.commit()
   
