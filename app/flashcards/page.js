@@ -40,15 +40,6 @@ export default function Flashcard() {
     if(isLoaded && !isSignedIn){
       router.push("/")
     }
-
-    const getTimeStamp = async (id) =>{
-      
-      const documentReference = doc(collection(doc(collection(database, 'users'), user.id), "flashcardSets"), id)
-      const docy = await getDoc(documentReference)
-
-      console.log(docy)
-      return ""
-    }
   
     useEffect(() => {
         async function getFlashcards() {
@@ -80,6 +71,7 @@ export default function Flashcard() {
       const handleCardClick = (id) => {
         router.push(`/flashcard?id=${id}`)
       }
+
       const styleBox = {
         // background: "rgb(35,150,255);",
         // background: "radial-gradient(circle, rgba(35,150,255,1) 0%, rgba(194,240,255,1) 87%, rgba(229,255,104,1) 100%);"  
@@ -115,7 +107,7 @@ export default function Flashcard() {
                         <FileCard
                           fileName={flashcard.name}
                           fileType="folder"
-                          fileSize={getTimeStamp(flashcard.name)}
+                          fileSize="HELLo"
                           lastModified="Modified 2 days ago"
                         />
                       </CardActionArea>
