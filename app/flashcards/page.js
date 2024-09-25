@@ -115,7 +115,7 @@ export default function Flashcard() {
                         <FileCard
                           fileName={flashcard.name}
                           fileType="folder"
-                          fileSize={}
+                          fileSize={getTimeStamp(flashcard.name)}
                           lastModified="Modified 2 days ago"
                         />
                       </CardActionArea>
