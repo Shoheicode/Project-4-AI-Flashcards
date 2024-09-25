@@ -43,11 +43,11 @@ export default function Flashcard() {
 
     const getTimeStamp = async (id) =>{
       
-      const documentReference = doc(collection(doc(collection(database, 'users'), user.id), "flashcardSets"), search)
+      const documentReference = doc(collection(doc(collection(database, 'users'), user.id), "flashcardSets"), id)
       const docy = await getDoc(documentReference)
-      
-      const flashcds = docy.data().flashcards
-      setFlashcards(flashcds)
+
+      console.log(docy)
+      return ""
     }
   
     useEffect(() => {
