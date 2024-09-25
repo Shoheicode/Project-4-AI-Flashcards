@@ -24,7 +24,7 @@ import {
 import './text.css'
 
 import { database } from "@/app/firebase";
-import { collection, doc, getDoc, setDoc, addDoc, writeBatch } from 'firebase/firestore';
+import { collection, doc, getDoc, setDoc, addDoc, writeBatch, serverTimestamp } from 'firebase/firestore';
 import { SignedOut, SignedIn, SignOutButton, useUser, UserButton } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
 import NavBar from '@/components/navbar/navbar';
