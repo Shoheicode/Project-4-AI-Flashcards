@@ -50,12 +50,15 @@ export default function Flashcard() {
           
           if (docSnap.exists()) {
             const collections = docSnap.data().flashcardSets || []
+
             setFlashcards(collections)
             console.log(collections)
             console.log(collections.length)
           } else {
             await setDoc(docRef, { flashcards: [] })
           }
+
+          
         }
         getFlashcards()
       }, [user])
