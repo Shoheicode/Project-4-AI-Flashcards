@@ -77,15 +77,15 @@ export default function Generate() {
       if (userDocSnap.exists()) {
         console.log("bye yee")
         const userData = userDocSnap.data()
-        const updatedSets = [...(userData.flashcardSets || []), { name: setName,  timestamp: a }]
+        const updatedSets = [...(userData.flashcardSets || []), { name: setName }]
         batch.update(userDocRef, { flashcardSets: updatedSets })
       } else {
         console.log("HIHIH")
-        batch.set(userDocRef, { flashcardSets: [{ name: setName,  timestamp: a }] })
+        batch.set(userDocRef, { flashcardSets: [{ name: setName }] })
       }
   
       const setDocRef = doc(collection(userDocRef, 'flashcardSets'), setName)
-      batch.set(setDocRef, { flashcards })
+      batch.set(setDocRef, { flashcards, timestamp: serverTimestamp() })
   
       await batch.commit()
   
