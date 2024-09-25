@@ -52,8 +52,6 @@ export default function Flashcard() {
             const collections = docSnap.data().flashcardSets || []
 
             setFlashcards(collections)
-            console.log(collections)
-            console.log(collections.length)
           } else {
             await setDoc(docRef, { flashcards: [] })
           }
