@@ -77,7 +77,7 @@ export default function Generate() {
         const updatedSets = [...(userData.flashcardSets || []), { name: setName }]
         batch.update(userDocRef, { flashcardSets: updatedSets })
       } else {
-        batch.set(userDocRef, { flashcardSets: [{ name: setName }] })
+        batch.set(userDocRef, { flashcardSets: [{ name: setName,  timestamp: serverTimestamp() }] })
       }
   
       const setDocRef = doc(collection(userDocRef, 'flashcardSets'), setName)
