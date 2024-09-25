@@ -60,7 +60,7 @@ export default function Flashcard() {
               const docy = await getDoc(documentReference)
               console.log(collections[i].name)
               console.log(docy.data().timestamp)
-              total[collections[i].name] = docy.data().timestamp.date
+              total[collections[i].name] = docy.data().timestamp
             }
 
             console.log(total)
