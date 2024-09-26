@@ -162,6 +162,12 @@ export default function Flashcard() {
                   <Button 
                     variant='contained'
                     onClick={goToPrevSlide}
+                    sx={
+                      {
+                        color: "black",
+                      bgcolor: "#23d5ab",
+                      }
+                    }
                     className="buttonC"
                   >
                     Prev
