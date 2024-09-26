@@ -30,6 +30,7 @@ import { useRouter } from 'next/navigation';
 import { useUser } from '@clerk/nextjs';
 import NavBar from '@/components/navbar/navbar';
 import FileCard from '@/components/CardsForFlash/cardsforflash';
+import Link from 'next/link';
 
 export default function Flashcard() {
     //gets the user
@@ -127,14 +128,14 @@ export default function Flashcard() {
                 {flashcards.map((flashcard, index) => (
                   <Grid item xs={12} sm={6} md={4} key={index}>
                     
-                      <CardActionArea onClick={() => handleCardClick(flashcard)}>
+                      <div onClick={() => handleCardClick(flashcard)}>
                         <FileCard
                           fileName={flashcard}
                           fileType="folder"
                           fileSize={getFlash(flashcard)}
                           lastModified={"Added " + getFlash(flashcard)}
                         />
-                      </CardActionArea>
+                      </div>
                     
                   </Grid>
                 ))}
