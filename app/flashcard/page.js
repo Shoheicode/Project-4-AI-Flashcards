@@ -88,10 +88,12 @@ export default function Flashcard() {
           minHeight={"120vh"}
         >
           <NavBar />
-          <Container maxWidth="md">
+          <Container 
+          maxWidth="md">
+            <Stack>
               <Typography variant="h1" className="startText" color={"white"}>{search}</Typography>
             {flashcards.length > 0 && (<Box>
-              <Stack gap={3}>
+              <Stack gap={5}>
                 <Card>
                     <CardActionArea onClick={() => handleCardClick(currentIndex)}>
                       <CardContent>
@@ -151,7 +153,7 @@ export default function Flashcard() {
                   >
                     Prev
                   </Button>
-                  <Typography>
+                  <Typography color={"white"}>
                     {currentIndex + 1}/{flashcards.length}
                   </Typography>
                   <Button
@@ -165,6 +167,7 @@ export default function Flashcard() {
               </Stack>
             </Box>
             )}
+            </Stack>
           </Container>
         </Box>
       )
