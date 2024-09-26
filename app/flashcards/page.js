@@ -68,7 +68,7 @@ export default function Flashcard() {
             let total = {}
 
             const refercence = collection(doc(collection(database, 'users'), user.id), "flashcardSets")
-            const q = query(refercence, orderBy("timestamp"));
+            const q = query(refercence, orderBy("timestamp", "desc"));
             console.log("HIHIHIHI AM RUNING BABY")
 
             const docQ = await getDocs(q)
