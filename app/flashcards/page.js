@@ -48,7 +48,6 @@ export default function Flashcard() {
       console.log(flashs[name])
       let str = flashs[name].seconds*1000;
       const newDate = new Date(str)
-      console.log(newDate)
       return newDate.toLocaleString();
     };
   
