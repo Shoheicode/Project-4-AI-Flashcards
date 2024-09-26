@@ -25,9 +25,9 @@ export default function FileCard({ fileName, fileType, fileSize, lastModified })
         
         <div className="icon-container">
           {isFolder ? (
-            <Folder size={96} />
+            <Folder size={96} color='black'/>
           ) : (
-            <File size={96} />
+            <File size={96} color='black'/>
           )}
         </div>
       </div>
