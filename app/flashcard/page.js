@@ -180,6 +180,11 @@ export default function Flashcard() {
                     variant='contained'
                     onClick={goToNextSlide}
                     className="buttonC"
+
+                    sx={{
+                      color: "black",
+                      bgcolor: "#23d5ab",
+                    }}
                   >
                     Next
                   </Button>
