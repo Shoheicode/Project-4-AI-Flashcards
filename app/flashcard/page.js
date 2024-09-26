@@ -196,8 +196,8 @@ export default function Flashcard() {
               </Box>
               )}
               </Stack>
-              <div>
-                <p>hello</p>
+              <div className="stopwatch">
+                <p className="timer">hello</p>
               </div>
             </Stack>
           </Container>
