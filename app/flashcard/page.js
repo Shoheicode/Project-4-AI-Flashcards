@@ -35,8 +35,9 @@ export default function Flashcard() {
     const [time, setTime] = useState(30);
     const [running, setRunning] = useState(false)
 
-    const format = (time) =>{
-
+    const resetTimer = ()=>{
+      setRunning(false);
+      setTime(30)
     }
 
     const router = useRouter();
