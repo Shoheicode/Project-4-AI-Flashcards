@@ -44,6 +44,20 @@ export default function Flashcard() {
       setTime(30)
     }
 
+    useEffect(() => {
+      let interval;
+  
+      if (running && time > 0) {
+        interval = setInterval(() => {
+          setTime((prevTime) => prevTime - 1);
+        }, 1000);
+      } else if (time === 0) {
+        setRunning(false);
+      }
+  
+      return () => clearInterval(interval);
+    }, [running, time]);
+
     const router = useRouter();
 
     if(isLoaded && !isSignedIn){
