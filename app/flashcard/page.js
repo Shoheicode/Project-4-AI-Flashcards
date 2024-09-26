@@ -89,7 +89,13 @@ export default function Flashcard() {
         >
           <NavBar />
           <Container 
-          maxWidth="md">
+            maxWidth="md"
+            sx={
+              {
+                padding: 10
+              }
+            }
+          >
             <Stack
               gap={4}
             >
