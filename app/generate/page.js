@@ -269,7 +269,9 @@ return (
                   >
                     Prev
                   </Button>
-                  <Typography>
+                  <Typography
+                    color={"white"}
+                  >
                     {currentIndex + 1}/{flashcards.length}
                   </Typography>
                   <Button
@@ -293,6 +295,10 @@ return (
                   <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center' }}>
                       <Button variant="contained" color="primary" onClick={handleOpenDialog}
                         className="buttonC"
+                        sx={{
+                          color: "black",
+                          bgcolor: "#23d5ab",
+                        }}
                       >
                         Save Flashcards
                       </Button>
