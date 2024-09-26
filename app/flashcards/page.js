@@ -44,7 +44,8 @@ export default function Flashcard() {
     }
 
     const getFlash = (name)=>{
-      
+      console.log(flashs[name])
+      return flashs[name];
     };
   
     useEffect(() => {
