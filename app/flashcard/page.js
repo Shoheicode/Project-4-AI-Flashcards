@@ -158,6 +158,7 @@ export default function Flashcard() {
                   <Button 
                     variant='contained'
                     onClick={goToPrevSlide}
+                    className="buttonC"
                   >
                     Prev
                   </Button>
@@ -168,6 +169,7 @@ export default function Flashcard() {
                     //style={rightArrowStyles}
                     variant='contained'
                     onClick={goToNextSlide}
+                    className="buttonC"
                   >
                     Next
                   </Button>

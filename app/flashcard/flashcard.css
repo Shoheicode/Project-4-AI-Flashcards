@@ -6,3 +6,8 @@
     font-size: 70px;
     color: white;
 }
+
+.buttonC:hover{
+    color: white;
+    background-color: #1db18f!important;
+}
