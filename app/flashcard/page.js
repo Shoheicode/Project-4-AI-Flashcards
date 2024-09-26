@@ -113,6 +113,8 @@ export default function Flashcard() {
           <NavBar />
           <Stack
               direction={"row"}
+              paddingLeft={5}
+              paddingRight={5}
             >
           <Container 
             maxWidth="md"
@@ -218,17 +220,23 @@ export default function Flashcard() {
               )}
               </Stack>
           </Container>
-          <div className="countdown-timer">
-            <p className="timer-display">{time} seconds</p>
-            <div className="button-container">
-              <Button onClick={resetTimer} className="timer-button">
-                Restart
-              </Button>
-              <Button onClick={startTimer} className="timer-button">
-                Start
-              </Button>
+          <Box
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+          >
+            <div className="countdown-timer">
+              <p className="timer-display">{time} seconds</p>
+              <div className="button-container">
+                <Button onClick={resetTimer} className="timer-button buttonC">
+                  Restart
+                </Button>
+                <Button onClick={startTimer} className="timer-button buttonC">
+                  Start
+                </Button>
+              </div>
             </div>
-          </div>
+          </Box>
           </Stack>
         </Box>
       )
