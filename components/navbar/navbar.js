@@ -40,7 +40,11 @@ export default function NavBar(){
 
 
     const DrawerList = (
-      <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+      <Box sx={{ width: 250,
+        height:"100%"
+       }} role="presentation" onClick={toggleDrawer(false)}
+        bgcolor={"#5C63B2"}
+      >
         <List>
           <ListItem key={"AStar Flashcards"} disablePadding>
             <ListItemButton href="/">
