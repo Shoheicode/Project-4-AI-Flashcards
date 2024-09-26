@@ -90,7 +90,9 @@ export default function Flashcard() {
           <NavBar />
           <Container 
           maxWidth="md">
-            <Stack>
+            <Stack
+              gap={4}
+            >
               <Typography variant="h1" className="startText" color={"white"}>{search}</Typography>
             {flashcards.length > 0 && (<Box>
               <Stack gap={5}>
