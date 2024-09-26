@@ -217,13 +217,13 @@ export default function Flashcard() {
               </Box>
               )}
               </Stack>
-              <div className="stopwatch">
-                <p className="timer">{time} seconds</p>
-                <div className="actions">
-                  <Button onClick={resetTimer}>
+              <div className="countdown-timer">
+                <p className="timer-display">{time} seconds</p>
+                <div className="button-container">
+                  <Button onClick={resetTimer} className="timer-button">
                     Restart
                   </Button>
-                  <Button onClick={startTimer}>
+                  <Button onClick={startTimer} className="timer-button">
                     Start
                   </Button>
                 </div>
