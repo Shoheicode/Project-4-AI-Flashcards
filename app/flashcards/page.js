@@ -60,7 +60,8 @@ export default function Flashcard() {
           const docSnap = await getDoc(docRef)
           
           if (docSnap.exists()) {
-            const collections = docSnap.data().flashcardSets || []
+            // const collections = docSnap.data().flashcardSets || []
+            let collections = []
 
             let total = {}
 
@@ -73,15 +74,16 @@ export default function Flashcard() {
             docQ.forEach((doc) => {
               // doc.data() is never undefined for query doc snapshots
               console.log(doc.id, " => ", doc.data());
+              collections.push(doc.id);
             });
 
-            for(var i = 0; i < collections.length; i++){
-              const documentReference = doc(collection(doc(collection(database, 'users'), user.id), "flashcardSets"), collections[i].name)
-              const docy = await getDoc(documentReference)
-              console.log(collections[i].name)
-              console.log(docy.data().timestamp)
-              total[collections[i].name] = docy.data().timestamp
-            }
+            // for(var i = 0; i < collections.length; i++){
+            //   const documentReference = doc(collection(doc(collection(database, 'users'), user.id), "flashcardSets"), collections[i].name)
+            //   const docy = await getDoc(documentReference)
+            //   console.log(collections[i].name)
+            //   console.log(docy.data().timestamp)
+            //   total[collections[i].name] = docy.data().timestamp
+            // }
 
             console.log(total)
 
