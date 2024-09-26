@@ -72,11 +72,10 @@ export default function Flashcard() {
             console.log(total)
 
             setFlashcards(collections)
+            setFlashs(total)
           } else {
             await setDoc(docRef, { flashcards: [] })
           }
-
-          
         }
         getFlashcards()
       }, [user])
