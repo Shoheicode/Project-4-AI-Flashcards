@@ -111,6 +111,9 @@ export default function Flashcard() {
           minHeight={"120vh"}
         >
           <NavBar />
+          <Stack
+              direction={"row"}
+            >
           <Container 
             maxWidth="md"
             sx={
@@ -119,9 +122,6 @@ export default function Flashcard() {
               }
             }
           >
-            <Stack
-              direction={"row"}
-            >
               <Stack
                 gap={4}
               >
@@ -217,7 +217,8 @@ export default function Flashcard() {
               </Box>
               )}
               </Stack>
-              <div className="countdown-timer">
+          </Container>
+          <div className="countdown-timer">
                 <p className="timer-display">{time} seconds</p>
                 <div className="button-container">
                   <Button onClick={resetTimer} className="timer-button">
@@ -228,8 +229,7 @@ export default function Flashcard() {
                   </Button>
                 </div>
               </div>
-            </Stack>
-          </Container>
+          </Stack>
         </Box>
       )
 
