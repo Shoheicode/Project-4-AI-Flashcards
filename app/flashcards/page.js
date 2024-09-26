@@ -108,11 +108,12 @@ export default function Flashcard() {
               minHeight={"100vh"}
               padding={10}
             >
-              <Typography variant="h4" component="h1" gutterBottom 
+              <Typography variant="h3" component="h1" gutterBottom 
                 sx={{
                   color:"white",
                 }}
                 className='startText'
+                textAlign={"center"}
               >
                 Cards
               </Typography>
