@@ -74,8 +74,7 @@ export default function Flashcard() {
             const docQ = await getDocs(q)
 
             docQ.forEach((doc) => {
-              // doc.data() is never undefined for query doc snapshots
-              console.log(doc.id, " => ", doc.data());
+              total[doc.id] = doc.data().timestamp
               collections.push(doc.id);
             });
 
