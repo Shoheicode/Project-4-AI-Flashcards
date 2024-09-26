@@ -128,7 +128,7 @@ export default function Flashcard() {
                           fileName={flashcard.name}
                           fileType="folder"
                           fileSize={getFlash(flashcard.name)}
-                          lastModified="Modified 2 days ago"
+                          lastModified={"Added " + getFlash(flashcard.name)}
                         />
                       </CardActionArea>
                     
