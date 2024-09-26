@@ -106,7 +106,9 @@ export default function NavBar(){
       <Box sx={{ 
         width: 250,
         height:"100%"
-      }} role="presentation" onClick={toggleDrawer(false)}>
+      }} 
+      bgcolor={"#5C63B2"}
+      role="presentation" onClick={toggleDrawer(false)}>
         <Stack
           display={"flex"}
           justifyContent={"center"}
