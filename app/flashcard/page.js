@@ -228,7 +228,7 @@ export default function Flashcard() {
                   <Button onClick={resetTimer}>
                     Restart
                   </Button>
-                  <Button onClick={}>
+                  <Button onClick={startTimer}>
                     Start
                   </Button>
                 </div>
