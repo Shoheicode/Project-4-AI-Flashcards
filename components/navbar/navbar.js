@@ -103,7 +103,10 @@ export default function NavBar(){
     );
 
     const EmptyDrawerList = (
-      <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+      <Box sx={{ 
+        width: 250,
+        height:"100%"
+      }} role="presentation" onClick={toggleDrawer(false)}>
         <Stack
           display={"flex"}
           justifyContent={"center"}
