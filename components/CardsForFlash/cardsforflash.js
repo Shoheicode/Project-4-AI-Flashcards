@@ -30,7 +30,6 @@ export default function FileCard({ fileName, fileType, fileSize, lastModified })
             <File size={96} />
           )}
         </div>
-
       </div>
     </div>
   );
