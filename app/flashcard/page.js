@@ -223,7 +223,7 @@ export default function Flashcard() {
               )}
               </Stack>
               <div className="stopwatch">
-                <p className="timer">hello</p>
+                <p className="timer">{time} seconds</p>
                 <div className="actions">
                   <Button>
                     Restart
