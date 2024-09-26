@@ -8,11 +8,11 @@
 }
 
 .buttonC{
-    color: black;
-    background-color: #23d5ab;
+    color: black!important;
+    background-color: #23d5ab!important;
 }
 
 .buttonC:hover{
-    color: white;
+    color: white!important;
     background-color: #1db18f!important;
 }
