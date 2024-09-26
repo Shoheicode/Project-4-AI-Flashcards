@@ -88,7 +88,7 @@ export default function Flashcard() {
         >
           <NavBar />
           <Container maxWidth="md">
-              <Typography variant="h1">{search}</Typography>
+              <Typography variant="h1" className="startText">{search}</Typography>
             {flashcards.length > 0 && (<Box>
               <Stack gap={3}>
                 <Card>
