@@ -66,6 +66,8 @@ export default function Flashcard() {
 
             for(var i = 0; i < collections.length; i++){
               const documentReference = doc(collection(doc(collection(database, 'users'), user.id), "flashcardSets"), collections[i].name)
+              const q = query(documentReference, orderBy("timestamp"));
+              console.log(q)
               const docy = await getDoc(documentReference)
               console.log(collections[i].name)
               console.log(docy.data().timestamp)
