@@ -78,14 +78,6 @@ export default function Flashcard() {
               collections.push(doc.id);
             });
 
-            // for(var i = 0; i < collections.length; i++){
-            //   const documentReference = doc(collection(doc(collection(database, 'users'), user.id), "flashcardSets"), collections[i].name)
-            //   const docy = await getDoc(documentReference)
-            //   console.log(collections[i].name)
-            //   console.log(docy.data().timestamp)
-            //   total[collections[i].name] = docy.data().timestamp
-            // }
-
             console.log(collections)
 
             setFlashcards(collections)
