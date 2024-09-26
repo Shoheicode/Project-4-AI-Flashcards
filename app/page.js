@@ -138,7 +138,7 @@ export default function Home() {
           bgcolor={"#149DA1"}
           className="section"
         >
-          <Typography variant="h2" component="h2" gutterBottom color={"black"} className="apply title">
+          <Typography variant="h2" component="h2" gutterBottom color={"white"} className="apply title">
             Pricing
           </Typography>
           <Grid container spacing={4} justifyContent="center">
