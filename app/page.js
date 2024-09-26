@@ -141,6 +141,7 @@ export default function Home() {
         <Box sx={{textAlign: "center" }}
           padding={10}
           bgcolor={"#149DA1"}
+          min-height={"100vh"}
           className="section"
         >
           <Typography variant="h2" component="h2" gutterBottom color={"white"} className="apply title">

@@ -34,21 +34,23 @@ export default function PaidTierCard({
   return (
     <Grid item xs={12} md={6}>
       <Box
-        height={220}
+        height={420}
         border={"2px solid black"}
         borderRadius={3}
         bgcolor={bgcolor}
         display="flex"
         flexDirection="column"
         alignItems="center"
-        justifyContent="center"
+        padding={5}
         className="boxT"
       >
-        <Typography variant="h4" className="textStyle1">{tierName} </Typography>
-        <Typography variant="h5" className="textStyle2" sx={{ marginBottom: "0.5em" }}>
+        <Typography variant="h3" className="textStyle1">{tierName} </Typography>
+        <Typography variant="h4" className="textStyle2" sx={{ marginBottom: "0.5em" }}>
           {price}
         </Typography>
-        <Typography className="textStyle">{description}</Typography>
+        <Typography className="textStyle"
+          fontSize={30}
+        >{description}</Typography>
         <Button
           className="textStyle startButton"
           variant="contained"
