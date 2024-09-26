@@ -27,8 +27,18 @@ export default function FileCard({ fileName, fileType, fileSize, lastModified })
           {isFolder ? (
             <Folder size={96} color='black'/>
           ) : (
-            <File size={96} color='black'/>
+            <File size={96} />
           )}
+        </div>
+        
+        <div className="card-footer">
+          <p className="file-size">{fileSize}</p>
+          <div className="action-buttons">
+            <button className="action-button">
+              <Download size={16} />
+              Open
+            </button>
+          </div>
         </div>
       </div>
     </div>
