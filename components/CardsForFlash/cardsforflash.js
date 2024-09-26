@@ -33,16 +33,6 @@ export default function FileCard({ fileName, fileType, fileSize, lastModified })
         
         <div className="card-footer">
           <p className="file-size">{fileSize}</p>
-          <div className="action-buttons">
-            <button className="action-button">
-              <Download size={16} />
-              Download
-            </button>
-            <button className="action-button">
-              <Share2 size={16} />
-              Share
-            </button>
-          </div>
         </div>
       </div>
     </div>
