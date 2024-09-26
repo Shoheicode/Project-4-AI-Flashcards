@@ -77,8 +77,9 @@ export default function Flashcard() {
         }))
       }
       const styleBox = {
-        background: "rgb(30,0,255);",
-        background: "radial-gradient(circle, rgba(30,0,255,1) 0%, rgba(0,0,0,1) 100%);"  
+        // background: "rgb(30,0,255);",
+        // background: "radial-gradient(circle, rgba(30,0,255,1) 0%, rgba(0,0,0,1) 100%);"  
+        background: "rgb(40,43,42);"
       }
     
       return (
@@ -88,7 +89,7 @@ export default function Flashcard() {
         >
           <NavBar />
           <Container maxWidth="md">
-              <Typography variant="h1" className="startText">{search}</Typography>
+              <Typography variant="h1" className="startText" color={"white"}>{search}</Typography>
             {flashcards.length > 0 && (<Box>
               <Stack gap={3}>
                 <Card>
