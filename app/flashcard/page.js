@@ -196,6 +196,9 @@ export default function Flashcard() {
               </Box>
               )}
               </Stack>
+              <div>
+                <p>hello</p>
+              </div>
             </Stack>
           </Container>
         </Box>
