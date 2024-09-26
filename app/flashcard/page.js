@@ -24,6 +24,7 @@ import {
 } from '@mui/material'
 import { useRouter } from "next/navigation";
 import NavBar from "@/components/navbar/navbar"
+import './flashcard.css'
 
 export default function Flashcard() {
     const { isLoaded, isSignedIn, user } = useUser()
@@ -99,7 +100,7 @@ export default function Flashcard() {
             <Stack
               gap={4}
             >
-              <Typography variant="h1" className="startText" color={"white"}>{search}</Typography>
+              <Typography variant="h1" className="startText" color={"white"}textAlign={"center"}>{search}</Typography>
             {flashcards.length > 0 && (<Box>
               <Stack gap={5}>
                 <Card>
