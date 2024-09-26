@@ -2,9 +2,16 @@ import React, { useState } from 'react';
 import { File, Folder, MoreVertical, Download, Share2 } from 'lucide-react';
 import './cardsforflash.css'
 
+import { useRouter } from 'next/navigation';
+
 export default function FileCard({ fileName, fileType, fileSize, lastModified }){
   const [isHovered, setIsHovered] = useState(false);
   const isFolder = fileType === 'folder';
+  const router = useRouter()
+
+  const handleCardClick = (id) => {
+    router.push(`/flashcard?id=${id}`)
+  }
 
   return (
     <div
@@ -34,7 +41,7 @@ export default function FileCard({ fileName, fileType, fileSize, lastModified })
         <div className="card-footer">
           <p className="file-size">{fileSize}</p>
           <div className="action-buttons">
-            <button className="action-button">
+            <button className="action-button" onClick={}>
               <Download size={16} />
               Open
             </button>
