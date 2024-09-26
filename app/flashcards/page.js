@@ -42,6 +42,10 @@ export default function Flashcard() {
     if(isLoaded && !isSignedIn){
       router.push("/")
     }
+
+    const getFlash = (name)=>{
+      
+    };
   
     useEffect(() => {
         async function getFlashcards() {
