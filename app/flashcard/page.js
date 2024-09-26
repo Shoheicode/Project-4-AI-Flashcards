@@ -32,7 +32,8 @@ export default function Flashcard() {
     const [flashcards, setFlashcards] = useState([])
     const [flipped, setFlipped] = useState({})
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [time, setTime] = useState(0)
+    const [time, setTime] = useState(0);
+    const [running, setRunning] = useState(true)
     const router = useRouter();
 
     if(isLoaded && !isSignedIn){
