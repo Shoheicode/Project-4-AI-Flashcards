@@ -44,6 +44,7 @@ export default function Flashcard() {
     }
 
     const getFlash = (name)=>{
+      console.log("RUNNING")
       console.log(flashs[name])
       return flashs[name];
     };
