@@ -225,10 +225,10 @@ export default function Flashcard() {
               <div className="stopwatch">
                 <p className="timer">{time} seconds</p>
                 <div className="actions">
-                  <Button>
+                  <Button onClick={resetTimer}>
                     Restart
                   </Button>
-                  <Button>
+                  <Button onClick={}>
                     Start
                   </Button>
                 </div>
