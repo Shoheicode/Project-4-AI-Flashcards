@@ -53,7 +53,7 @@ export default function Home() {
           justifyContent={"center"}
           alignItems={"center"} 
           color={"white"}
-          bgcolor={"black"}
+          bgcolor={"#8349B7"}
           margin={"0px"}
           padding={10}
           className="section"
@@ -135,7 +135,7 @@ export default function Home() {
 
         <Box sx={{textAlign: "center" }}
           padding={10}
-          bgcolor={"white"}
+          bgcolor={"#149DA1"}
           className="section"
         >
           <Typography variant="h2" component="h2" gutterBottom color={"black"} className="apply title">

@@ -304,7 +304,11 @@ return (
                       </Button>
                   </Box>
               )}
-            <Dialog open={dialogOpen} onClose={handleCloseDialog}>
+            <Dialog open={dialogOpen} 
+              onClose={handleCloseDialog}>
+                <Box
+                  bgcolor={"teal"}
+                >
                 <DialogTitle>Save Flashcard Set</DialogTitle>
                 <DialogContent>
                     <DialogContentText>
@@ -326,6 +330,7 @@ return (
                     Save
                     </Button>
                 </DialogActions>
+                </Box>
             </Dialog>            
           </Box>
       </Container>

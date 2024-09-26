@@ -40,7 +40,7 @@
   }
   to {
     width: 45%;
-    border-right-color: black;
+    border-right-color: #8349B7;
   }
 }
 
@@ -99,7 +99,7 @@
     text-wrap:stable;
     border-right: 2px solid hsl(0, 0%, 0%);
     white-space: nowrap;
-    animation: typewriter 4s steps(44) 1s 1 normal both,
+    animation: typewriter1 4s steps(44) 1s 1 normal both,
       blinkTextCursor 4000ms none;
   }
 
@@ -185,7 +185,7 @@
     }
     to {
       width: 100%;
-      border-right-color: black;
+      border-right-color: #8349B7;
     }
   }
 
