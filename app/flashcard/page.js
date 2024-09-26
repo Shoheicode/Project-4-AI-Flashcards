@@ -202,6 +202,9 @@ export default function Flashcard() {
                   <Button>
                     Restart
                   </Button>
+                  <Button>
+                    Start
+                  </Button>
                 </div>
               </div>
             </Stack>
