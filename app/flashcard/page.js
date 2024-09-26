@@ -219,16 +219,16 @@ export default function Flashcard() {
               </Stack>
           </Container>
           <div className="countdown-timer">
-                <p className="timer-display">{time} seconds</p>
-                <div className="button-container">
-                  <Button onClick={resetTimer} className="timer-button">
-                    Restart
-                  </Button>
-                  <Button onClick={startTimer} className="timer-button">
-                    Start
-                  </Button>
-                </div>
-              </div>
+            <p className="timer-display">{time} seconds</p>
+            <div className="button-container">
+              <Button onClick={resetTimer} className="timer-button">
+                Restart
+              </Button>
+              <Button onClick={startTimer} className="timer-button">
+                Start
+              </Button>
+            </div>
+          </div>
           </Stack>
         </Box>
       )
