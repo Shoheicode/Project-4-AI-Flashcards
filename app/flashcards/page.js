@@ -60,12 +60,11 @@ export default function Flashcard() {
           const docSnap = await getDoc(docRef)
           
           if (docSnap.exists()) {
-            // const collections = docSnap.data().flashcardSets || []
             let collections = []
 
             let total = {}
 
-            const refercence = collection(doc(collection(database, 'users'), user.id), "flashcardSets")
+            const refercence = collection(docRef, "flashcardSets")
             const q = query(refercence, orderBy("timestamp", "desc"));
             console.log("HIHIHIHI AM RUNING BABY")
 
