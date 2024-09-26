@@ -9,6 +9,7 @@ import {
   Card,
   CardActionArea,
   CardContent,
+  Divider,
 } from '@mui/material'
 
 import * as React from 'react';
@@ -93,7 +94,7 @@ export default function Flashcard() {
       const styleBox = {
         // background: "rgb(35,150,255);",
         // background: "radial-gradient(circle, rgba(35,150,255,1) 0%, rgba(194,240,255,1) 87%, rgba(229,255,104,1) 100%);"  
-        background: "rgb(40,43,42);"
+        background: "#149DA1;"
       }
     
       return (
@@ -115,8 +116,10 @@ export default function Flashcard() {
                 className='startText'
                 textAlign={"center"}
               >
-                Cards
+                Saved AStar Cards
               </Typography>
+
+              <Divider/>
 
               <Grid container spacing={3} sx={{ mt: 4 }}>
                 {flashcards.map((flashcard, index) => (
