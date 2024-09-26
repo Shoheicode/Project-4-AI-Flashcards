@@ -10,7 +10,7 @@
   
   .cool-card {
     width: 288px;
-    height: 384px;
+    height: 300px;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -30,7 +30,7 @@
   }
   
   .cool-card.folder .card-content {
-    background: linear-gradient(to bottom right, #31fbbe, #0fa363);
+    background: linear-gradient(to bottom right, #d8f8ef, #a8d5c1);
   }
   
   .cool-card.file .card-content {
