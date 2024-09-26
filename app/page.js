@@ -30,6 +30,12 @@ export default function Home() {
       "radial-gradient(circle, rgba(35,150,255,1) 0%, rgba(194,240,255,1) 87%, rgba(229,255,104,1) 100%);",
   };
 
+  const firstBox = {
+      textAlign:"center",
+      background: "rgb(20,157,161);",
+      background: "linear-gradient(30deg, rgba(20,157,161,1) 0%, rgba(131,73,183,1) 100%);"
+  }
+
   return (
     <Box sx={styleBox} minHeight={"120vh"}>
       <Head>
@@ -47,13 +53,12 @@ export default function Home() {
         <Box 
           width={"100%"}
           height={"100vh"}
-          sx={{ textAlign: "center" }}
+          sx={firstBox}
           display={"flex"}
           flexDirection={"column"}
           justifyContent={"center"}
           alignItems={"center"} 
           color={"white"}
-          bgcolor={"#8349B7"}
           margin={"0px"}
           padding={10}
           className="section"
