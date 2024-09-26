@@ -87,7 +87,7 @@ export default function Flashcard() {
             //   total[collections[i].name] = docy.data().timestamp
             // }
 
-            console.log(total)
+            console.log(collections)
 
             setFlashcards(collections)
             setFlashs(total)
@@ -138,12 +138,12 @@ export default function Flashcard() {
                 {flashcards.map((flashcard, index) => (
                   <Grid item xs={12} sm={6} md={4} key={index}>
                     
-                      <CardActionArea onClick={() => handleCardClick(flashcard.name)}>
+                      <CardActionArea onClick={() => handleCardClick(flashcard)}>
                         <FileCard
-                          fileName={flashcard.name}
+                          fileName={flashcard}
                           fileType="folder"
-                          fileSize={getFlash(flashcard.name)}
-                          lastModified={"Added " + getFlash(flashcard.name)}
+                          fileSize={getFlash(flashcard)}
+                          lastModified={"Added " + getFlash(flashcard)}
                         />
                       </CardActionArea>
                     
