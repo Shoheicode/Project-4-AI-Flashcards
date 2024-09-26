@@ -21,6 +21,7 @@ import {
   CardContent,
   CardActionArea,
   Stack,
+  Divider,
 } from '@mui/material'
 import { useRouter } from "next/navigation";
 import NavBar from "@/components/navbar/navbar"
@@ -101,6 +102,8 @@ export default function Flashcard() {
               gap={4}
             >
               <Typography variant="h1" className="startText" color={"white"}textAlign={"center"}>{search}</Typography>
+              <Divider/>
+            
             {flashcards.length > 0 && (<Box>
               <Stack gap={5}>
                 <Card>
