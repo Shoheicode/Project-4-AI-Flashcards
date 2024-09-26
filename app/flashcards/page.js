@@ -66,7 +66,6 @@ export default function Flashcard() {
 
             const refercence = collection(docRef, "flashcardSets")
             const q = query(refercence, orderBy("timestamp", "desc"));
-            console.log("HIHIHIHI AM RUNING BABY")
 
             const docQ = await getDocs(q)
 
@@ -128,7 +127,7 @@ export default function Flashcard() {
                         <FileCard
                           fileName={flashcard}
                           fileType="folder"
-                          fileSize={getFlash(flashcard)}
+                          fileSize={""}
                           lastModified={"Added " + getFlash(flashcard)}
                         />
                       </div>
