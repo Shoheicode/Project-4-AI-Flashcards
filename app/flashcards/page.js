@@ -78,8 +78,6 @@ export default function Flashcard() {
               collections.push(doc.id);
             });
 
-            console.log(collections)
-
             setFlashcards(collections)
             setFlashs(total)
           } else {
