@@ -20,6 +20,7 @@ import {
 import { useRouter } from "next/navigation";
 import NavBar from "@/components/navbar/navbar"
 import './flashcard.css'
+import './countdowntimer.css'
 
 export default function Flashcard() {
     const { isLoaded, isSignedIn, user } = useUser()
