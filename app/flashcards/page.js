@@ -25,7 +25,7 @@ import MenuList from '@mui/material/MenuList';
 import './flashcards.css'
 
 import { database} from "@/app/firebase";
-import { collection, doc, getDoc, setDoc, query, orderBy } from 'firebase/firestore';
+import { collection, doc, getDoc, setDoc, query, orderBy,getDocs } from 'firebase/firestore';
 import { useRouter } from 'next/navigation';
 import { useUser } from '@clerk/nextjs';
 import NavBar from '@/components/navbar/navbar';
