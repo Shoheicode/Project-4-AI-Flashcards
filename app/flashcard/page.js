@@ -79,7 +79,7 @@ export default function Flashcard() {
       const styleBox = {
         // background: "rgb(30,0,255);",
         // background: "radial-gradient(circle, rgba(30,0,255,1) 0%, rgba(0,0,0,1) 100%);"  
-        background: "rgb(40,43,42);"
+        background: "#8349B7"
       }
     
       return (
