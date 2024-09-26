@@ -30,10 +30,7 @@ export default function FileCard({ fileName, fileType, fileSize, lastModified })
             <File size={96} />
           )}
         </div>
-        
-        <div className="card-footer">
-          <p className="file-size">{fileSize}</p>
-        </div>
+
       </div>
     </div>
   );
