@@ -24,7 +24,7 @@ import MenuList from '@mui/material/MenuList';
 
 import './flashcards.css'
 
-import { database } from "@/app/firebase";
+import { database, query, orderBy } from "@/app/firebase";
 import { collection, doc, getDoc, setDoc} from 'firebase/firestore';
 import { useRouter } from 'next/navigation';
 import { useUser } from '@clerk/nextjs';
@@ -64,7 +64,8 @@ export default function Flashcard() {
 
             let total = {}
 
-            const q = query(documentReference, orderBy("timestamp"));
+            const refercence = collection(doc(collection(database, 'users'), user.id), "flashcardSets")
+            const q = query(refercence, orderBy("timestamp"));
             console.log("HIHIHIHI AM RUNING BABY")
             console.log(q)
 
