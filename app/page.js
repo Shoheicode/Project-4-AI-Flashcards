@@ -7,8 +7,6 @@ import {
   Container,
   createTheme,
   Grid,
-  ThemeProvider,
-  Toolbar,
   Typography,
 } from "@mui/material";
 import "./typewrite.css"
