@@ -19,8 +19,6 @@ import {
 } from '@mui/material'
 import { useRouter } from "next/navigation";
 import NavBar from "@/components/navbar/navbar"
-import './flashcard.css'
-import './countdowntimer.css'
 
 export default function Flashcard() {
     const { isLoaded, isSignedIn, user } = useUser()
@@ -220,23 +218,6 @@ export default function Flashcard() {
               )}
               </Stack>
           </Container>
-          <Box
-            display={"flex"}
-            justifyContent={"center"}
-            alignItems={"center"}
-          >
-            <div className="countdown-timer">
-              <p className="timer-display">{time} seconds</p>
-              <div className="button-container">
-                <Button onClick={resetTimer} className="timer-button buttonC">
-                  Restart
-                </Button>
-                <Button onClick={startTimer} className="timer-button buttonC">
-                  Start
-                </Button>
-              </div>
-            </div>
-          </Box>
           </Stack>
         </Box>
       )
