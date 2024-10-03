@@ -38,6 +38,10 @@ export default function NavBar(){
 
     const [userName, setUsername] = React.useState("");
 
+    if(isLoaded == false){
+      return <></>
+    }
+
 
     const DrawerList = (
       <Box sx={{ width: 250,
