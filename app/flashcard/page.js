@@ -54,6 +54,7 @@ export default function Flashcard() {
     }, [running, time]);
 
     const router = useRouter();
+    
 
     if(isLoaded && !isSignedIn){
       router.push("/")
@@ -76,9 +77,13 @@ export default function Flashcard() {
       }))
       setCurrentIndex(currentIndex === 0 ? flashcards.length-1 : currentIndex-1);
     }
-    
+
     const searchParams = useSearchParams()
     const search = searchParams.get('id')
+
+    const goToQuiz = () => {
+      router.push(`/flashcard?id=${search}`)
+    }
     
     useEffect(() => {
         async function getFlashcard() {
@@ -236,6 +241,10 @@ export default function Flashcard() {
                 </Button>
               </div>
             </div>
+
+            <Button onClick={goToQuiz}>
+              hi
+            </Button>
           </Box>
           </Stack>
         </Box>
