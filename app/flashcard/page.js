@@ -225,7 +225,7 @@ export default function Flashcard() {
               )}
               </Stack>
           </Container>
-          <Box
+          <Stack
             display={"flex"}
             justifyContent={"center"}
             alignItems={"center"}
@@ -246,7 +246,7 @@ export default function Flashcard() {
             <Button onClick={goToQuiz} className="buttonC">
               Quiz
             </Button>
-          </Box>
+          </Stack>
           </Stack>
         </Box>
       )
