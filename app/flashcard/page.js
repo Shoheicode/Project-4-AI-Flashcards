@@ -230,6 +230,7 @@ export default function Flashcard() {
             justifyContent={"center"}
             alignItems={"center"}
             flexDirection={"column"}
+            gap={5}
           >
             <div className="countdown-timer">
               <p className="timer-display">{time} seconds</p>
