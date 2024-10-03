@@ -229,6 +229,7 @@ export default function Flashcard() {
             display={"flex"}
             justifyContent={"center"}
             alignItems={"center"}
+            flexDirection={"column"}
           >
             <div className="countdown-timer">
               <p className="timer-display">{time} seconds</p>
@@ -242,8 +243,8 @@ export default function Flashcard() {
               </div>
             </div>
 
-            <Button onClick={goToQuiz}>
-              hi
+            <Button onClick={goToQuiz} className="buttonC">
+              Quiz
             </Button>
           </Box>
           </Stack>
