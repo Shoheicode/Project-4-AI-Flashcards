@@ -82,7 +82,7 @@ export default function Flashcard() {
     const search = searchParams.get('id')
 
     const goToQuiz = () => {
-      router.push(`/flashcard?id=${search}`)
+      router.push(`/quiz?id=${search}`)
     }
     
     useEffect(() => {
