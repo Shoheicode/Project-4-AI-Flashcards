@@ -20,7 +20,7 @@ import {
 import { useRouter } from "next/navigation";
 import NavBar from "@/components/navbar/navbar"
 
-export default function Flashcard() {
+export default function Quiz() {
     const { isLoaded, isSignedIn, user } = useUser()
     const [flashcards, setFlashcards] = useState([])
     const [flipped, setFlipped] = useState({})
