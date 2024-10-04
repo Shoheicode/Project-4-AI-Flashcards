@@ -3,7 +3,8 @@ import OpenAI from "openai";
 
 const systemPrompt = `You are a quiz creator. You take in text that contains 10 word/question and 10 definition or answer seperated by a | sign.
 Make sure you do each one 10 and do each of the word/questions and each answer.
-You will then generate a 4 different (Make sure each answer is different. NO 2 same answers) choice multiple choice problem with the answer with it. Make sure to create exactly 10 questions for each of the responses you get.
+You will then generate a 4 different (Make sure each answer is different and not the same as the answer. NO 2 same answers) 
+choice multiple choice problem with the answer with it.
 You should return in the following JSON format:
 {
   "questions":[
