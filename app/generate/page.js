@@ -36,9 +36,13 @@ export default function Generate() {
   const [flashcards, setFlashcards] = useState([])
   const router = useRouter()
     
-    if(isLoaded && !isSignedIn){
-      router.push("/")
-    }
+  if(isLoaded && !isSignedIn){
+    router.push("/")
+  }
+
+  const loadQuestions = () =>{
+    
+  }
 
   const [currentIndex, setCurrentIndex] = useState(0);
   
