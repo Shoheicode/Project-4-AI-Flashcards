@@ -45,29 +45,29 @@ export default function Quiz() {
         let text = "";
 
         for(var i = 0; i < flashcards.length; i++){
-            text += "Question/Word: " + flashcards[i].front + " Answer: " + flashcards[i].back + "\n"
+            text += "Question/Word: " + flashcards[i].front + " | "+ " Answer: " + flashcards[i].back + "\n"
         }
 
         console.log(text)
         
-        // try {
-        //   const response = await fetch('/api/generateQuiz', {
-        //     method: 'POST',
-        //     body: text,
-        //   })
+        try {
+          const response = await fetch('/api/generateQuiz', {
+            method: 'POST',
+            body: text,
+          })
       
-        //   if (!response.ok) {
-        //     throw new Error('Failed to generate flashcards')
-        //   }
+          if (!response.ok) {
+            throw new Error('Failed to generate flashcards')
+          }
       
-        //   const data = await response.json()
-        //   console.log(data);
-        //   setFlashcards(data)
+          const data = await response.json()
+          console.log(data);
+          setFlashcards(data)
           
-        // } catch (error) {
-        //   console.error('Error generating flashcards:', error)
-        //   alert('An error occurred while generating flashcards. Please try again.')
-        // }
+        } catch (error) {
+          console.error('Error generating flashcards:', error)
+          alert('An error occurred while generating flashcards. Please try again.')
+        }
       }
 
     useEffect(() => {
