@@ -50,24 +50,24 @@ export default function Quiz() {
 
         console.log(text)
         
-        try {
-          const response = await fetch('/api/generateQuiz', {
-            method: 'POST',
-            body: text,
-          })
+        // try {
+        //   const response = await fetch('/api/generateQuiz', {
+        //     method: 'POST',
+        //     body: text,
+        //   })
       
-          if (!response.ok) {
-            throw new Error('Failed to generate flashcards')
-          }
+        //   if (!response.ok) {
+        //     throw new Error('Failed to generate flashcards')
+        //   }
       
-          const data = await response.json()
-          console.log(data);
-          setFlashcards(data)
+        //   const data = await response.json()
+        //   console.log(data);
+        //   setFlashcards(data)
           
-        } catch (error) {
-          console.error('Error generating flashcards:', error)
-          alert('An error occurred while generating flashcards. Please try again.')
-        }
+        // } catch (error) {
+        //   console.error('Error generating flashcards:', error)
+        //   alert('An error occurred while generating flashcards. Please try again.')
+        // }
       }
 
     useEffect(() => {
