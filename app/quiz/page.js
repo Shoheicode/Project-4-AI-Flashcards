@@ -40,7 +40,7 @@ export default function Quiz() {
     const loadQuestions = async (text) =>{
         
         try {
-          const response = await fetch('/api/generate', {
+          const response = await fetch('/api/generateQuiz', {
             method: 'POST',
             body: text,
           })
@@ -239,6 +239,9 @@ export default function Quiz() {
               </Box>
               )}
               </Stack>
+              <Button className="buttonC">
+                Press me to start quiz
+              </Button>
           </Container>
           </Stack>
         </Box>
