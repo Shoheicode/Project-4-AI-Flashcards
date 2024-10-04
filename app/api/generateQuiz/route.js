@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import OpenAI from "openai";
 
 const systemPrompt = `You are a quiz creator. You take in text that contains an word/question and a definition or answer seperated by a | sign.
-You will then generate a 4 choice multiple choice problem with the answer with it. Make sure to create exactly 10 questions for each of the responses you get.
+You will then generate a 4 different choice multiple choice problem with the answer with it. Make sure to create exactly 10 questions for each of the responses you get.
 You should return in the following JSON format:
 {
   "questions":[
@@ -48,5 +48,5 @@ export async function POST(req){
     console.log(questions.questions)
 
     // Return the flashcards as a JSON response
-    return NextResponse.json(questions.quesitons)
+    return NextResponse.json(questions)
 };
