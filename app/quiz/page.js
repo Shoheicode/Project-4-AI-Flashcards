@@ -23,6 +23,7 @@ import NavBar from "@/components/navbar/navbar"
 export default function Quiz() {
     const { isLoaded, isSignedIn, user } = useUser()
     const [flashcards, setFlashcards] = useState([])
+    const [questions, setQuestions] = useState([])
     const [flipped, setFlipped] = useState({})
     const [currentIndex, setCurrentIndex] = useState(0);
     const [time, setTime] = useState(30);
