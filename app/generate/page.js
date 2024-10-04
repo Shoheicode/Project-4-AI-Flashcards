@@ -136,6 +136,7 @@ export default function Generate() {
     }
 
     const data = await response.json()
+    console.log(data);
     setFlashcards(data)
     
   } catch (error) {
