@@ -37,7 +37,11 @@ export default function Quiz() {
       setTime(30)
     }
 
-    const loadQuestions = async (text) =>{
+    const loadQuestions = async () =>{
+        if(flashcards.length < 0){
+          return;
+        }
+        
         
         try {
           const response = await fetch('/api/generateQuiz', {
