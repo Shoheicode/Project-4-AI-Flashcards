@@ -40,10 +40,6 @@ export default function Generate() {
     router.push("/")
   }
 
-  const loadQuestions = () =>{
-    
-  }
-
   const [currentIndex, setCurrentIndex] = useState(0);
   
   const goToNextSlide = () =>{

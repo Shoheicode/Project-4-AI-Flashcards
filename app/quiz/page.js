@@ -37,6 +37,28 @@ export default function Quiz() {
       setTime(30)
     }
 
+    const loadQuestions = async (text) =>{
+        
+        try {
+          const response = await fetch('/api/generate', {
+            method: 'POST',
+            body: text,
+          })
+      
+          if (!response.ok) {
+            throw new Error('Failed to generate flashcards')
+          }
+      
+          const data = await response.json()
+          console.log(data);
+          setFlashcards(data)
+          
+        } catch (error) {
+          console.error('Error generating flashcards:', error)
+          alert('An error occurred while generating flashcards. Please try again.')
+        }
+      }
+
     useEffect(() => {
       let interval;
   
