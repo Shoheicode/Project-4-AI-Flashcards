@@ -239,7 +239,7 @@ export default function Quiz() {
               </Box>
               )}
               </Stack>
-              <Button className="buttonC">
+              <Button className="buttonC" onClick={loadQuestions}>
                 Press me to start quiz
               </Button>
           </Container>
