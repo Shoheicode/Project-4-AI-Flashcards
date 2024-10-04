@@ -61,8 +61,8 @@ export default function Quiz() {
           }
       
           const data = await response.json()
-          console.log(data);
-          setFlashcards(data)
+          console.log(data.questions);
+          setFlashcards(data.questions)
           
         } catch (error) {
           console.error('Error generating flashcards:', error)
