@@ -17,10 +17,10 @@ You should return in the following JSON format:
   "questions":[
     {
       "title": "The word they are trying to guess",
-      "first": "first answer",
-      "second": "second answer",
-      "third": "third answer",
-      "fourth": "the correct answer",
+      "1": "first answer",
+      "2": "second answer",
+      "3": "third answer",
+      "4": "the correct answer",
     }
   ]
 }
