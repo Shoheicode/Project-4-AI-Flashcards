@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
 
-const systemPrompt = `You are a flashcard creator, you take in text and create multiple flashcards from it. Make sure to create exactly 10 flashcards.
+const systemPrompt = `You are a quiz creator. You take in text that contains an word along with a definition or answer
+and a multiple choice problem with the answer in it. Make sure to create exactly 10 questions for each of the responses you get.
 Both front and back should be one sentence long.
 You should return in the following JSON format:
 {
-  "flashcards":[
+  "questions":[
     {
       "front": "Front of the card",
       "back": "Back of the card"
