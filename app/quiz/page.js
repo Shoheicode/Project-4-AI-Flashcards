@@ -45,7 +45,7 @@ export default function Quiz() {
         let text = "";
 
         for(var i = 0; i < flashcards.length; i++){
-            text += "Question/Word: " + flashcards[i].front + " Answer: " + flashcards[i].back + "/n"
+            text += "Question/Word: " + flashcards[i].front + " Answer: " + flashcards[i].back + "\n"
         }
 
         console.log(text)
