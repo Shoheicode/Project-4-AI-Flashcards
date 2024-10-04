@@ -42,6 +42,13 @@ export default function Quiz() {
           return;
         }
         
+        let text = "";
+
+        for(var i = 0; i < flashcards.length; i++){
+            text += "Question/Word: " + flashcards[i].front + " Answer: " + flashcards[i].back + "/n"
+        }
+
+        console.log(text)
         
         try {
           const response = await fetch('/api/generateQuiz', {
