@@ -29,8 +29,9 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(45deg, #8a2be2, #20b2aa);
+    overflow: hidden;
     z-index: -10000;
-    animation: moveMask 5s infinite ease-in-out;
+    /* animation: moveMask 1s infinite ease-in-out; */
   }
   
   @keyframes moveMask {
