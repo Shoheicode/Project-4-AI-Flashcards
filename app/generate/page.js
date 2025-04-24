@@ -308,7 +308,7 @@ return (
             <Dialog open={dialogOpen} 
               onClose={handleCloseDialog}>
                 <Box
-                  bgcolor={"teal"}
+                  bgcolor={"lightcyan"}
                 >
                 <DialogTitle>Save Flashcard Set</DialogTitle>
                 <DialogContent>
