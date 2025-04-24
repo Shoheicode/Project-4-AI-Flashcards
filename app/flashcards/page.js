@@ -83,7 +83,7 @@ export default function Flashcard() {
       }, [user])
 
       if (!isLoaded || !isSignedIn){
-        console.log("HIHIHII")
+        // console.log("HIHIHII")
         return <></>
       }
 

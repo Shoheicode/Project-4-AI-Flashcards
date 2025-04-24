@@ -80,7 +80,7 @@ export default function Generate() {
         const updatedSets = [...(userData.flashcardSets || []), { name: setName }]
         batch.update(userDocRef, { flashcardSets: updatedSets })
       } else {
-        console.log("HIHIH")
+        // console.log("HIHIH")
         batch.set(userDocRef, { flashcardSets: [{ name: setName }] })
       }
   
