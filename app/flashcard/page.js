@@ -5,6 +5,7 @@ import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { database } from "../firebase";
+import './background.css'
 import {
   Container,
   TextField,
@@ -110,14 +111,21 @@ export default function Flashcard() {
     
       return (
         <Box
-          sx={styleBox}
+          // sx={styleBox}
+          
           minHeight={"120vh"}
         >
+          <div
+            className="box-moving-background-flashcard"
+          >
+
+          </div>
           <NavBar />
           <Stack
               direction={"row"}
               paddingLeft={5}
               paddingRight={5}
+              cla
             >
           <Container 
             maxWidth="md"
@@ -130,7 +138,7 @@ export default function Flashcard() {
               <Stack
                 gap={4}
               >
-                <Typography variant="h1" className="startText" color={"white"}textAlign={"center"}>{search}</Typography>
+                <Typography variant="h1" className="startText" color={"black"}textAlign={"center"}>{search}</Typography>
                 <Divider/>
               
               {flashcards.length > 0 && (<Box>
@@ -201,7 +209,7 @@ export default function Flashcard() {
                     >
                       Prev
                     </Button>
-                    <Typography color={"white"}>
+                    <Typography color={"black"}>
                       {currentIndex + 1}/{flashcards.length}
                     </Typography>
                     <Button
