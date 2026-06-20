@@ -33,6 +33,8 @@ AStar Flashcards is a full-stack web application built to make studying faster a
 
 This project highlights practical experience with AI integration, serverless API routes, user authentication, database design, payment processing, reusable React components, and responsive UI development.
 
+<img width="1897" height="866" alt="image" src="https://github.com/user-attachments/assets/6b66117d-ffa2-4589-ba7d-244539247cb1" />
+
 ---
 
 ## Key Features
